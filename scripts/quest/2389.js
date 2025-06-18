@@ -1,0 +1,63 @@
+/* 
+    任務: 危機中的蘑菇王國
+*/
+
+var status = -1;
+
+var status = -1;
+
+function start(mode, type, selection) {
+    if (mode == 1) {
+        status++;
+    } else {
+        if (status == 0) {
+            qm.sendOk("這件事可以說是蘑菇王國對你的請求……希望你務必再考慮一下。");
+            qm.dispose();
+            return;
+        } else if (status == 3) {
+            qm.sendOk("真的不需要我送你去嗎？那好你有時間來的話就到蘑菇城堡來找我吧。");
+            qm.dispose();
+            return;
+        }
+        status--;
+    }
+    if (status == 0) {
+        if (qm.getMapId() == 180000001) {
+            qm.sendOk("很遺憾，您因為違反用戶守則被禁止遊戲活動，如有異議請聯繫管理員.");
+            qm.dispose();
+        } else {
+            qm.sendYesNo("現在你的強大了許多，我有一件事情想找你幫忙，你是否願意聽聽？");
+        }
+    } else if (status == 1) {
+        qm.sendNext("故事發生在蘑菇王國，具體的事情我也不太清楚。但是好像很緊急。");
+    } else if (status == 2) {
+        qm.sendNext("我不知道事情的細節，所以想找你幫幫忙，你可能會節省更多的時間幫助蘑菇王國，我送你一封信，請你把它交給門衛。 \r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0#\r\n#v4032375# #t4032375#");
+    } else if (status == 3) {
+        qm.gainItem(4032375, 1);
+        qm.forceStartQuest();
+        qm.sendYesNo("如果你現在想去蘑菇城堡的話，我可以送你去。你確定要去嗎？");
+    } else if (status == 4) {
+        qm.warp(106020000);
+        qm.dispose();
+    }
+}
+
+function end(mode, type, selection) {
+    if (mode == 1) {
+        status++;
+    } else {
+        status--;
+    }
+    if (status == 0) {
+        qm.sendNext("嗯？這個從轉職教官那裡得來的信件嗎？");
+    } else if (status == 1) {
+        qm.sendNextPrev("我看看……。");
+    } else if (status == 2) {
+        qm.sendNextPrev("好吧，既然你有轉職教官的推薦信，我想你是一個很棒的人，很抱歉我沒有自我介紹，我是包圍蘑菇城堡的衛兵，正如你所看到的，這裡是我們暫時的藏身之地，我們的情況很糟糕，儘管如此，歡迎你來到蘑菇王國！");
+    } else if (status == 3) {
+        qm.forceCompleteQuest();
+        qm.gainItem(4032375, -1);
+        qm.forceStartQuest(2312);
+        qm.dispose();
+    }
+}

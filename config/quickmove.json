@@ -1,0 +1,109 @@
+[
+  {
+    "VALUE": 3,
+    "NPC": 9000087,
+    "SCRIPT": "",
+    "MIN_LEVEL": 0,
+    "DESC": "傳送到可與其他玩家進行道具交易的#c<自由市場>#。"
+  },
+  {
+    "VALUE": 17,
+    "NPC": 9000366,
+    "SCRIPT": "MvpFunction",
+    "MIN_LEVEL": 0,
+    "DESC": "開啟MVP專用的#c<MVP功能>#。"
+  },
+  {
+    "VALUE": 5,
+    "NPC": 9000086,
+    "SCRIPT": "worldwarp",
+    "MIN_LEVEL": 0,
+    "DESC": "#c<萬能傳送>#:\n- #c城鎮#傳送\n- #cBOSS#傳送\n- #c副本#傳送",
+    "CLOSE_AFTER_CLICK" : true
+  },
+  {
+    "VALUE": 19,
+    "NPC": 9000226,
+    "SCRIPT": "825",
+    "MIN_LEVEL": 0,
+    "DESC": "開啟#c<福利中心>#。"
+  },
+  {
+    "VALUE": 10,
+    "NPC": 9010041,
+    "SCRIPT": "changeJob",
+    "MIN_LEVEL": 0,
+    "DESC": "開啟#c<一鍵轉職>#。"
+  },
+  {
+    "VALUE": 7,
+    "NPC": 9010040,
+    "SCRIPT": "4",
+    "MIN_LEVEL": 0,
+    "DESC": "開啟#c<萬能商店>#。"
+  },
+  {
+    "VALUE": 105,
+    "NPC": 1012008,
+    "SCRIPT": "GameCenter",
+    "MIN_LEVEL": 0,
+    "DESC": "開啟#c<娛樂遊戲>#。"
+  },
+  {
+    "VALUE": 100,
+    "NPC": 9130033,
+    "SCRIPT": "29",
+    "MIN_LEVEL": 0,
+    "DESC": "開啟#c<點商中心>#。"
+  },
+  {
+    "VALUE": 15,
+    "NPC": 9000152,
+    "SCRIPT": "0",
+    "MIN_LEVEL": 0,
+    "DESC": "開啟#c<兌換中心>#。"
+  },
+  {
+    "VALUE": 16,
+    "NPC": 9000153,
+    "SCRIPT": "30",
+    "MIN_LEVEL": 0,
+    "DESC": "開啟#c<裝備進化>#。"
+  },
+  {
+    "VALUE": 20,
+    "NPC": 9030300,
+    "SCRIPT": "",
+    "MIN_LEVEL": 0,
+    "DESC": "可以透過艾格利其來訪問楓之谷拍賣場."
+  },
+  {
+    "VALUE": 21,
+    "NPC": 9062008,
+    "SCRIPT": "",
+    "MIN_LEVEL": 0,
+    "DESC": "可跟楓幣商城負責人布雷妮小姐進行對話。"
+  },
+  {
+    "VALUE": 104,
+    "NPC": 9201594,
+    "SCRIPT": "otherhelp",
+    "MIN_LEVEL": 0,
+    "DESC": "開啟#c<其他幫助>#。"
+  },
+  {
+    "VALUE": 18,
+    "NPC": 9001088,
+    "SCRIPT": "chongzhijiangli",
+    "MIN_LEVEL": 0,
+    "DESC": "開啟#c<贊助中心>#。"
+  },
+  {
+    "VALUE": 102,
+    "NPC": 2007,
+    "SCRIPT": "TestSrv",
+    "MIN_LEVEL": 0,
+    "DESC": "開啟#c<測試服功能>#。",
+    "TESTPIA": true
+  }
+]

@@ -1,0 +1,38 @@
+@startuml
+abstract class TablePane {
+    + Map<String, Vector<String>> changelist
+
+    editAction()
+    addAction()
+    removeAction()
+}
+
+class DropPane {
+    -- Value --
+    - 怪物ID
+    - 道具ID
+    - 道具數量
+    - 最小掉落數量
+    - 最大掉落數量
+    - 任務ID
+    - 爆率
+}
+
+class FishingPane {
+    -- Value --
+    - NPC商店ID/NPCID
+    - 道具位置
+    - 道具ID
+    - 遊戲幣價格
+    - 特殊貨幣價格
+    - 特殊貨幣數量
+    - 有效時間
+    - 潛能狀態
+    - 分類
+    - 可購買的最小等級
+
+}
+
+TablePane <|-- DropPane : 繼承
+TablePane <|-- FishingPane : 繼承
+@enduml
