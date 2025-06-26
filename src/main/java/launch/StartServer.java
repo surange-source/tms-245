@@ -45,8 +45,8 @@ public class StartServer {
         // tmp
         PortalScriptManager.getInstance().getInvocable("portal/106030100_IP.js", null);
         long starttime = System.currentTimeMillis();
-        InitializeServer.initAllData(((now, total) -> {
-            log.info("正在加載數據...總進度：" + now + "/" + total);
+        InitializeServer.initAllData(((now, total, loadPart) -> {
+            log.info("正在加載數據...總進度：{}/{}, 加載完成：{}" , now , total, loadPart);
             if (now == total) {
                 log.info(String.format("加載數據完成，耗時：%.3f秒", (System.currentTimeMillis() - starttime) / 1000.0));
                 InitializeServer.InitDataFinished = true;

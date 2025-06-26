@@ -235,68 +235,71 @@ public class InitializeServer {
         List<Runnable> runs = new ArrayList<>();
         runs.add(() -> {
             MapleOverrideData.init();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, " MapleOverrideData.init()");
             SkillFactory.loadDelays();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "SkillFactory.loadDelays()");
             SkillFactory.loadSkillData();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total," SkillFactory.loadSkillData()");
             SkillFactory.loadMemorySkills();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "SkillFactory.loadMemorySkills()");
         });
         runs.add(() -> {
             MapleForceFactory.getInstance().initialize();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "MapleForceFactory.getInstance().initialize()");
             MapleItemInformationProvider.getInstance().runItems();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "MapleItemInformationProvider.getInstance().runItems()");
             MapleItemInformationProvider.getInstance().runEtc();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "MapleItemInformationProvider.getInstance().runEtc()");
             MapleItemInformationProvider.getInstance().loadSetItemData();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total,"MapleItemInformationProvider.getInstance().loadSetItemData()");
             MapleItemInformationProvider.getInstance().loadFamiliarItems();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total," MapleItemInformationProvider.getInstance().loadFamiliarItems()");
             MapleItemInformationProvider.getInstance().loadPotentialData();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total,"MapleItemInformationProvider.getInstance().loadPotentialData()");
             // TwMS無星岩
             //MapleItemInformationProvider.getInstance().loadSocketData();
             //listener.next(count.incrementAndGet(), total);
+
+            // 商店需要在item加載后再加載
+            MapleShopFactory.getInstance().loadShopData();
+            listener.next(count.incrementAndGet(), total, "MapleShopFactory.getInstance().loadShopData()");
         });
         runs.add(() -> {
-            MapleShopFactory.getInstance().loadShopData();
-            listener.next(count.incrementAndGet(), total);
+
             MobSkillFactory.initialize();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "MobSkillFactory.initialize()");
             MapleUnionData.getInstance().init();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "MapleUnionData.getInstance().init()");
             MapleLifeFactory.initEliteMonster();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "MapleLifeFactory.getInstance().init()");
             MapleMonsterInformationProvider.getInstance().load();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "MapleMonsterInformationProvider.getInstance().load()");
         });
         runs.add(() -> {
             MapleMapFactory.loadAllLinkNpc();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "MapleMapFactory.getInstance().loadAllLinkNpc()");
             MapleMapFactory.loadAllMapName();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "MapleMapFactory.getInstance().loadAllMapName()");
             CashItemFactory.getInstance().initialize();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "CashItemFactory.getInstance().initialize()");
         });
         runs.add(() -> {
             ReactorScriptManager.getInstance().loadDrops();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "ReactorScriptManager.getInstance().loadDrops()");
             MapleDailyGift.getInstance().initialize();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "MapleDailyGift.getInstance().initialize()");
         });
         runs.add(() -> {
             MapleLifeFactory.loadQuestCounts();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "MapleLifeFactory.getInstance().loadQuestCounts()");
             MapleQuestDumper.getInstance().loadQuest();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "MapleQuestDumper.getInstance().loadQuest()");
         });
         runs.add(() -> {
             BossWillField.init();
             BossLucidField.init();
             ActionBarField.init();
-            listener.next(count.incrementAndGet(), total);
+            listener.next(count.incrementAndGet(), total, "BossWillField.init()");
         });
         for (Runnable run : runs) {
             new Thread(run).start();
@@ -306,7 +309,8 @@ public class InitializeServer {
     @FunctionalInterface
     public interface DataCacheListener {
 
-        void next(int now, int total);
+//        void next(int now, int total);
+        void next(int now, int total, String loadPart);
     }
 
     /**

@@ -9,7 +9,7 @@ var job;
 var jobNeedLv;
 var newJob = new Array();
 
-var noAdvance = "對不起，現在你不能轉職。你的等級必須在 ";
+var noAdvance = "私密馬賽，現在你不能轉職。你的等級必須在 ";
 var advance = "#r - 小助手主頁 >> 轉職功能 #k\r\n\r\n你好哦，我這裡可以提供快速轉職哦~";
 var unable = "好像你已經通過了全部的轉職了，你的冒險生活怎麼樣？如果遇到不開心的事，笑笑就過了。以後還有很多事情等著你去面對。";
 var noThanks = "\r\n\r\n#L100#謝謝，但是我現在暫時不想轉職。#l";

@@ -120,11 +120,11 @@ var selectedArea = -1;
 
 function start() {
     var map = cm.getMap();
-    if (map != null && (map.getFieldLimit() & 0x40) != 0) {
-        cm.dispose();
-        cm.getPlayer().dropMessage(1, "該區域無法進行傳送。");
-        return;
-    }
+    // if (map != null && (map.getFieldLimit() & 0x40) != 0) {
+    //     cm.dispose();
+    //     cm.getPlayer().dropMessage(1, "該區域無法進行傳送。");
+    //     return;
+    // }
     action(1, 0, 0);
 }
 

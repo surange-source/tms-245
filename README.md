@@ -42,3 +42,16 @@ password: 123456
    ![](./asset/config.png)
 
 4. 任务管理器 手动杀掉AES检查.等一分钟可能也行
+
+
+5. 常用指令
+!刷樂豆點 10000
+
+
+
+
+## 修复
+2025-06-26
+数据库少一个字段导致导入不了商城商品
+> ALTER TABLE `cashshop_modified_items` add COLUMN `extra_flags` tinyint(1)
+然后看补丁说需要删除这个字段
