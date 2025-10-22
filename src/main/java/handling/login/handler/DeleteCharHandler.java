@@ -7,7 +7,7 @@ package handling.login.handler;
 import client.MapleClient;
 import database.dao.AccountDao;
 import packet.LoginPacket;
-import tools.Pair;
+import tools.types.Pair;
 import tools.data.MaplePacketReader;
 
 import java.util.List;

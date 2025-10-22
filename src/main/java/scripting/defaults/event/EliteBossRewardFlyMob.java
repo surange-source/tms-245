@@ -4,7 +4,7 @@ import client.MapleCharacter;
 import scripting.event.AbstractEventScript;
 import scripting.event.EventInstanceManager;
 import server.maps.MapleMap;
-import tools.Randomizer;
+import server.Randomizer;
 
 public class EliteBossRewardFlyMob extends AbstractEventScript {
 

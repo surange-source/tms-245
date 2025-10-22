@@ -8,7 +8,7 @@ import client.inventory.MapleInventoryType;
 import constants.GameConstants;
 import constants.ItemConstants;
 import packet.InventoryPacket;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.awt.*;
 import java.util.concurrent.locks.Lock;

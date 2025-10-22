@@ -11,7 +11,7 @@ import server.MerchItemPackage;
 import server.shops.*;
 import server.shops.AbstractPlayerStore.BoughtItem;
 import server.shops.AbstractPlayerStore.VisitorInfo;
-import tools.Pair;
+import tools.types.Pair;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.util.List;

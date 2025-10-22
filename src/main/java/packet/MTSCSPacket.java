@@ -18,8 +18,8 @@ import server.RafflePool;
 import server.cashshop.CashItemFactory;
 import server.cashshop.CashItemInfo.CashModInfo;
 import server.cashshop.CashShop;
-import tools.Pair;
-import tools.Triple;
+import tools.types.Pair;
+import tools.types.Triple;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.text.SimpleDateFormat;

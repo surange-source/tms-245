@@ -9,10 +9,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import provider.*;
 import server.InitializeServer.WzSqlName;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import tools.StringUtil;
-import tools.Triple;
+import tools.types.Triple;
 
 import java.awt.*;
 import java.util.List;

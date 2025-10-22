@@ -17,7 +17,7 @@ import server.maps.MapleMapObject;
 import server.maps.MapleMapObjectType;
 import server.shops.HiredFisher;
 import packet.MaplePacketCreator;
-import tools.Pair;
+import tools.types.Pair;
 import tools.data.MaplePacketReader;
 
 import java.sql.Connection;

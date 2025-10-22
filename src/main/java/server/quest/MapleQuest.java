@@ -8,7 +8,7 @@ import constants.enums.UserChatMessageType;
 import handling.opcode.EffectOpcode;
 import org.apache.logging.log4j.LogManager;
 import scripting.npc.NPCScriptManager;
-import tools.Pair;
+import tools.types.Pair;
 import packet.EffectPacket;
 
 import java.io.Serializable;

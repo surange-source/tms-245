@@ -24,7 +24,7 @@ import server.maps.MapleMap;
 import server.maps.MapleMapFactory;
 import server.maps.MapleMapObject;
 import server.squad.MapleSquad;
-import tools.Randomizer;
+import server.Randomizer;
 
 import javax.script.Invocable;
 import javax.script.ScriptException;

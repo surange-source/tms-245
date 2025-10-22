@@ -8,7 +8,7 @@ import client.skills.handler.SkillClassFetcher;
 import constants.JobConstants;
 import constants.skills.通用V核心.曉之陣通用;
 import server.life.MapleMonster;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.data.MaplePacketReader;
 
 import java.awt.*;

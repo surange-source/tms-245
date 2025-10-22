@@ -40,6 +40,7 @@ import server.shop.MapleShop;
 import server.shop.MapleShopFactory;
 import server.unknown.B2BodyAttackInfo;
 import tools.*;
+import tools.types.*;
 import tools.data.MaplePacketLittleEndianWriter;
 import tools.data.MaplePacketReader;
 

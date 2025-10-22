@@ -17,7 +17,7 @@ import server.buffs.MapleStatEffect;
 import server.life.MapleMonster;
 import server.life.MobSkill;
 import server.maps.MapleSummon;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.data.MaplePacketReader;
 
 import java.awt.*;

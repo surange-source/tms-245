@@ -12,7 +12,7 @@ import server.life.MapleLifeFactory;
 import server.maps.MapleReactor;
 import server.maps.ReactorDropEntry;
 import packet.MaplePacketCreator;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.awt.*;
 import java.util.Collections;

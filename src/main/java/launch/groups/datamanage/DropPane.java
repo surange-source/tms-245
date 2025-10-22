@@ -6,7 +6,7 @@ import server.life.MapleLifeFactory;
 import server.life.MapleMonsterInformationProvider;
 import server.life.MonsterDropEntry;
 import server.life.MonsterGlobalDropEntry;
-import tools.Pair;
+import tools.types.Pair;
 
 import javax.swing.table.DefaultTableModel;
 import java.util.*;

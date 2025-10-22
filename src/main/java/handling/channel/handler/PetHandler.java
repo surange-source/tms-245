@@ -17,7 +17,7 @@ import server.MapleItemInformationProvider;
 import server.maps.FieldLimitType;
 import server.movement.LifeMovementFragment;
 import server.quest.MapleQuest;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.data.MaplePacketReader;
 
 import java.awt.*;

@@ -56,7 +56,6 @@ public class Config {
         ConfigurableProcessor2.process(NebuliteConfig.class, propsArr);
         ConfigurableProcessor2.process(CubeConfig.class, propsArr);
         ConfigurableProcessor2.process(MvpEquipConfig.class, propsArr);
-        ConfigurableProcessor2.process(EcpayConfig.class, propsArr);
         if (Config.isDevelop()) {
             ConfigurableProcessor2.process(OpcodeConfig.class, propsArr);
             OpcodeConfig.load();

@@ -2,9 +2,9 @@ package server;
 
 import database.DatabaseConnectionEx;
 import handling.world.party.ExpeditionType;
-import tools.Pair;
+import tools.types.Pair;
 import tools.StringUtil;
-import tools.Triple;
+import tools.types.Triple;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

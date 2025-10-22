@@ -1,6 +1,6 @@
 package client;
 
-import tools.Triple;
+import tools.types.Triple;
 
 public class PortableChair {
     private int itemId;

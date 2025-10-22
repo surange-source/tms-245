@@ -1,6 +1,6 @@
 package server.maps;
 
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.awt.*;
 import java.util.ArrayList;

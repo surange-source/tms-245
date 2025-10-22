@@ -6,7 +6,7 @@ package client.skills;
 
 import constants.ItemConstants;
 import constants.SkillConstants;
-import tools.Randomizer;
+import server.Randomizer;
 
 /**
  * @author PlayDK

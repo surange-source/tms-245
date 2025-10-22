@@ -21,8 +21,8 @@ import org.apache.logging.log4j.Logger;
 import packet.LoginPacket;
 import server.ShutdownServer;
 import tools.MapleAESOFB;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import tools.data.ByteArrayByteStream;
 import tools.data.MaplePacketReader;
 

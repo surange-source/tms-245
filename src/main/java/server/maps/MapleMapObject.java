@@ -21,6 +21,15 @@ public abstract class MapleMapObject {
         return new Point(position);
     }
 
+    public void setPosition(Point position) {
+        this.position.x = position.x;
+        this.position.y = position.y;
+    }
+
+    public Point getTruePosition() {
+        return position;
+    }
+
     public int getDwOwnerID() {
         return dwOwnerID;
     }
@@ -35,11 +44,6 @@ public abstract class MapleMapObject {
 
     public void setCustom(boolean custom) {
         this.custom = custom;
-    }
-
-    public void setPosition(Point position) {
-        this.position.x = position.x;
-        this.position.y = position.y;
     }
 
     public int getObjectId() {

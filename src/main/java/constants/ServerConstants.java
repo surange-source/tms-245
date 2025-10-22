@@ -91,7 +91,7 @@ public class ServerConstants {
     }
 
     public static String getIPv4Address() {
-        String[] hosts = {"http://ip111.cn/", "http://ip.3322.net/", "http://bot.whatismyipaddress.com/"};
+        String[] hosts = {"http://ifconfig.co/", "http://ifconfig.me/", "http://ifconfig.io/"};
         InputStream inputStream = null;
         for (String host : hosts) {
             try {

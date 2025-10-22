@@ -20,8 +20,8 @@ import server.maps.ForceAtomObject;
 import server.maps.MapleAffectedArea;
 import server.maps.MapleMapObject;
 import server.maps.MapleMapObjectType;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import tools.data.MaplePacketReader;
 
 import java.awt.*;

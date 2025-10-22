@@ -12,7 +12,7 @@ import constants.SkillConstants;
 import server.MapleStatInfo;
 import server.buffs.MapleStatEffect;
 import server.maps.MapleMapObject;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.data.MaplePacketReader;
 
 import java.awt.*;

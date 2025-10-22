@@ -1,8 +1,6 @@
 package launch;
 
-import api.HttpServer;
 import configs.Config;
-import ecpay.EcpayServer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import provider.MapleDataProviderFactory;
@@ -23,17 +21,11 @@ public class StartServer {
             System.err.println("伺服端初始化失敗。");
             System.exit(1);
         }
-        HttpServer.start();
         startServer();
-        //EcpayServer.SocketServer.StartServer();
     }
 
     public static void startServer() {
         guiEnabled = Config.getProperty("gui.enabled", "true").equals("true");
-        if (AbstractScriptManager.getScriptEngine() == null) {
-            log.error("Script engine is null!!");
-            System.exit(1);
-        }
         try {
             if (guiEnabled) {
                 Class.forName("launch.StartGUI");

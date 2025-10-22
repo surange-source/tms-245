@@ -33,8 +33,8 @@ import server.quest.MapleQuest;
 import server.squad.MapleSquad;
 import server.squad.MapleSquadType;
 import packet.MaplePacketCreator;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import tools.StringUtil;
 import packet.EffectPacket;
 

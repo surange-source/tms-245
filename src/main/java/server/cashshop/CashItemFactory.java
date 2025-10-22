@@ -5,7 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import provider.*;
 import server.cashshop.CashItemInfo.CashModInfo;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.io.File;
 import java.sql.Connection;

@@ -70,6 +70,7 @@ import server.shop.*;
 import server.shops.HiredFisher;
 import server.shops.IMaplePlayerShop;
 import tools.*;
+import tools.types.*;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.awt.*;

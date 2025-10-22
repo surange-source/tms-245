@@ -14,9 +14,9 @@ import org.apache.logging.log4j.Logger;
 import provider.*;
 import server.InitializeServer.WzSqlName;
 import server.buffs.MapleStatEffect;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.StringUtil;
-import tools.Triple;
+import tools.types.Triple;
 
 import java.awt.*;
 import java.sql.Connection;
@@ -26,6 +26,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.*;
 import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -47,7 +48,7 @@ public class SkillFactory {
     private static final Map<Integer, SummonSkillEntry> summonSkillInformation = new HashMap<>();
     private static final Map<Integer, Integer> mountIds = new HashMap<>();
     private static final Map<Integer, FamiliarEntry> familiarInformation = new HashMap<>();
-    private static final Map<Integer, List<Integer>> skillsByJob = new HashMap<>();
+    private static final Map<Integer, List<Integer>> skillsByJob = new ConcurrentHashMap<>();
     private static final Lock nameStringLock = new ReentrantLock();
     public static final Map<Integer, Integer> memorySkills = new HashMap<>();
 
@@ -364,22 +365,6 @@ public class SkillFactory {
     }
 
     public static Skill getSkill(int skillid) {
-        // redis
-//        String craftsdata = RedisUtil.hget(KEYNAMES.CRAFT_DATA.getKeyName(), String.valueOf(skillid));
-//        if (skillid >= 92000000 && skillid < 100000000 && craftsdata != null) {
-//            try {
-//                return mapper.readValue(craftsdata, CraftingEntry.class);
-//            } catch (Exception e) {
-//                log.error("讀取技能失敗:" + skillid, e);
-//            }
-//        }
-//        String skilldata = RedisUtil.hget(KEYNAMES.SKILL_DATA.getKeyName(), String.valueOf(skillid));
-//        try {
-//            return mapper.readValue(skilldata, Skill.class);
-//        } catch (Exception e) {
-//            log.error("讀取技能失敗:" + skillid, e);
-//        }
-//        return null;
         Skill skill = null;
         if (skillid >= 92000000 && skillid < 100000000 && craftings.containsKey(skillid)) {
             skill = craftings.get(skillid);
@@ -388,14 +373,6 @@ public class SkillFactory {
             skill = skills.get(skillid);
         }
         return skill;
-
-//        if (!skills.isEmpty()) {
-//            if (skillid >= 92000000 && skillid < 100000000 && craftings.containsKey(skillid)) {
-//                return craftings.get(skillid);
-//            }
-//            return skills.get(skillid);
-//        }
-//        return null;
     }
 
     public static MapleStatEffect getSkillEffect(int skillId, int level) {

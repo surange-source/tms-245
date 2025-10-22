@@ -9,7 +9,7 @@ package server.commands;
  */
 public enum PlayerRank {
 
-    普通('@', 0, false),
+    普通('@', "＠", 0, false),
     MVP銅牌I('$', "￥", 1, false),
     MVP銅牌II('$', "￥", 2, false),
     MVP銅牌III('$', "￥", 3, false),
@@ -18,7 +18,7 @@ public enum PlayerRank {
     MVP金牌('$', "￥", 6, false),
     MVP鑽石('$', "￥", 7, false),
     MVP紅鑽('$', "￥", 8, false),
-    實習管理員('%', 1, true),
+    實習管理員('%', "％", 1, true),
     遊戲管理員('!', "！", 2, true),
     超級管理員('!', "！", 3, true),
     伺服管理員('!', "！", 4, true);

@@ -134,7 +134,7 @@ public class EventConfigGroup extends AbstractConfigGroup {
                 new GroupPanel(
                         GroupingType.fillFirst,
                         search,
-                        new WebButton("刷新腳本選單", StartGUI.loadIcon("switch.png")) { // 刷新按鈕
+                        new WebButton("刷新腳本選單") {//, StartGUI.loadIcon("switch.png")) { // 刷新按鈕
                             {
                                 addActionListener(e -> updateData());
                             }

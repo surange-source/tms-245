@@ -41,9 +41,11 @@ import server.maps.MapleNodes.MapleNodeInfo;
 import server.maps.MapleNodes.MaplePlatform;
 import server.maps.MapleNodes.MonsterPoint;
 import server.quest.MapleQuest;
+import server.Randomizer;
 import server.squad.MapleSquad;
 import server.squad.MapleSquadType;
 import tools.*;
+import tools.types.*;
 
 import java.awt.Point;
 import java.awt.Rectangle;
@@ -896,10 +898,11 @@ public class MapleMap {
 //        if (Config.isDevelop() || chr != null && chr.isAdmin()) {
 //            log.info("[KillMonster] id：" + monster.getId() + " oid:" + monster.getObjectId(), new Throwable());
 //        }
-//        if (monster.getId() == 8820014) { //皮卡啾 pb sponge, kills pb(w) first before dying
-//            killMonster(8820000); //皮卡啾
-//        } else if (monster.getId() == 8820212) { //混沌皮卡啾
-//            killMonster(8820100); //混沌皮卡啾
+        if (monster.getId() == 8820014) { //皮卡啾 pb sponge, kills pb(w) first before dying
+            killMonster(8820000); //皮卡啾
+        } else if (monster.getId() == 8820304) { //混沌皮卡啾
+            killMonster(8820100); //混沌皮卡啾
+        }
 //        } else if (monster.getId() == 9300166) { //炸彈 ariant pq bomb
 //            animation = 2; //or is it 3?
 //        } else if (monster.getId() == 9101083 || monster.getId() == 8880000 || monster.getId() == 8880002) {  //梅格耐斯
@@ -1202,7 +1205,6 @@ public class MapleMap {
                 MapleMonster mons = (MapleMonster) mmo;
                 if (mons.getLinkOid() != monster.getObjectId()) {
                     killMonster(mons, chr, false, false, animation, 0);
-                    //FileoutputUtil.log(FileoutputUtil.Pinkbean_Log, "地圖殺死怪物 8820008 : " + mons.getId() + " - " + mons.getStats().getName(), true);
                 }
             }
         } else if (mobid >= 8820010 && mobid <= 8820014) { // 皮卡啾
@@ -1210,7 +1212,6 @@ public class MapleMap {
                 MapleMonster mons = (MapleMonster) mmo;
                 if (mons.getId() != 8820000 && mons.getId() != 8820001 && mons.getObjectId() != monster.getObjectId() && mons.isAlive() && mons.getLinkOid() == monster.getObjectId()) {
                     killMonster(mons, chr, false, false, animation, 0);
-                    //FileoutputUtil.log(FileoutputUtil.Pinkbean_Log, "地圖殺死怪物 皮卡啾 : " + mons.getId() + " - " + mons.getStats().getName(), true);
                 }
             }
         } else if (mobid == 8820108) { // 8820108 - 寶寶BOSS召喚用透明怪物 - 混沌皮卡啾
@@ -1224,7 +1225,7 @@ public class MapleMap {
         } else if (mobid >= 8820300 && mobid <= 8820304) { // 混沌皮卡啾
             for (MapleMapObject mmo : getMonsters()) {
                 MapleMonster mons = (MapleMonster) mmo;
-                if (mons.getId() != 8820100 && mons.getId() != 8820212 && mons.getObjectId() != monster.getObjectId() && mons.isAlive() && mons.getLinkOid() == monster.getObjectId()) {
+                if (mons.getId() != 8820100 && mons.getId() != 8820101 && mons.getId() != 8820212 && mons.getObjectId() != monster.getObjectId() && mons.isAlive() && mons.getLinkOid() == monster.getObjectId()) {
                     killMonster(mons, chr, false, false, animation, 0);
                     //FileoutputUtil.log(FileoutputUtil.Pinkbean_Log, "地圖殺死怪物 混沌皮卡啾 : " + mons.getId() + " - " + mons.getStats().getName(), true);
                 }
@@ -1515,6 +1516,9 @@ public class MapleMap {
 
     public List<MapleMonster> getAllMonster() {
         return getAllMonstersThreadsafe(false);
+    }
+    public List<MapleMonster> getAllMonstersThreadsafe() {
+        return getAllMonstersThreadsafe(true);
     }
 
     public List<MapleMonster> getMonsters() {

@@ -1,6 +1,6 @@
 package server.movement;
 
-import tools.Pair;
+import tools.types.Pair;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.util.ArrayList;

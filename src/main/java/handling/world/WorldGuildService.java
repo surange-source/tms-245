@@ -15,7 +15,7 @@ import handling.world.guild.MapleGuild;
 import handling.world.guild.MapleGuildCharacter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import tools.Pair;
+import tools.types.Pair;
 import packet.GuildPacket;
 
 import java.util.ArrayList;

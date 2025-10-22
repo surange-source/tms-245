@@ -19,9 +19,9 @@ import server.maps.MapleMapObjectType;
 import server.maps.MapleNodes;
 import server.maps.MapleReactor;
 import server.movement.LifeMovementFragment;
-import tools.Pair;
-import tools.Randomizer;
-import tools.Triple;
+import tools.types.Pair;
+import server.Randomizer;
+import tools.types.Triple;
 import tools.data.MaplePacketReader;
 import packet.MobPacket;
 

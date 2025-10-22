@@ -11,7 +11,7 @@ import constants.skills.*;
 import handling.opcode.SendPacketOpcode;
 import server.buffs.MapleStatEffect;
 import packet.MaplePacketCreator;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.data.MaplePacketReader;
 import tools.data.MaplePacketLittleEndianWriter;
 

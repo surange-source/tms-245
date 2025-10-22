@@ -3,8 +3,8 @@ package client.inventory;
 import configs.ServerConfig;
 import constants.ItemConstants;
 import server.MapleItemInformationProvider;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 
 import java.util.*;
 

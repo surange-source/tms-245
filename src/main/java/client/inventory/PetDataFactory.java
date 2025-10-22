@@ -4,7 +4,7 @@ import provider.MapleData;
 import provider.MapleDataProvider;
 import provider.MapleDataProviderFactory;
 import provider.MapleDataTool;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.io.File;
 import java.util.HashMap;

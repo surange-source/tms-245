@@ -13,7 +13,7 @@ import packet.EffectPacket;
 import packet.MaplePacketCreator;
 import server.MapleStatInfo;
 import server.buffs.MapleStatEffect;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.data.MaplePacketReader;
 
 import java.lang.reflect.Field;

@@ -15,7 +15,7 @@ import server.*;
 import server.buffs.MapleStatEffect;
 import server.life.Element;
 import server.quest.MapleQuest;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.util.*;
 

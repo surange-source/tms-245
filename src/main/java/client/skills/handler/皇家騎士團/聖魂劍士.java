@@ -15,7 +15,7 @@ import packet.SummonPacket;
 import server.MapleStatInfo;
 import server.buffs.MapleStatEffect;
 import server.maps.MapleSummon;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.awt.*;
 import java.lang.reflect.Field;

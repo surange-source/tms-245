@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 import server.AutobanManager;
 import server.Timer.CheatTimer;
 import packet.MaplePacketCreator;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.StringUtil;
 
 import java.awt.*;

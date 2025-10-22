@@ -21,7 +21,7 @@ import server.life.MapleMonster;
 import server.maps.ForceAtomObject;
 import server.maps.MapleMapObject;
 import server.maps.MapleMapObjectType;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.awt.*;
 import java.lang.reflect.Field;

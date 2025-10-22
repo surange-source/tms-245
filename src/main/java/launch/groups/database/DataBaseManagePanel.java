@@ -23,7 +23,7 @@ import org.apache.logging.log4j.Logger;
 import server.Timer;
 import launch.StartGUI;
 import tools.DateUtil;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.StringUtil;
 
 import javax.swing.*;
@@ -46,7 +46,7 @@ public class DataBaseManagePanel extends WebFrame {
 
     DataBaseManagePanel() {
         super("資料庫管理");
-        setIconImage(StartGUI.getMainIcon().getImage());
+        //setIconImage(StartGUI.getMainIcon().getImage());
 
         setupPath.setText(ServerConfig.DB_SETUPPATH);
         backupPath.setText(ServerConfig.DB_BACKUPPATH);

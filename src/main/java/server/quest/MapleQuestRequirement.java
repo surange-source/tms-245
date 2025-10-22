@@ -10,7 +10,7 @@ import client.inventory.MaplePet;
 import client.skills.Skill;
 import client.skills.SkillFactory;
 import constants.ItemConstants;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.io.Serializable;
 import java.sql.ResultSet;

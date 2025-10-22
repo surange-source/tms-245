@@ -32,7 +32,7 @@ import server.maps.events.Event_PyramidSubway;
 import server.quest.MapleQuest;
 import server.quest.MedalQuest;
 import packet.MaplePacketCreator;
-import tools.Randomizer;
+import server.Randomizer;
 import packet.EffectPacket;
 import packet.UIPacket;
 

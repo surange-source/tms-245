@@ -8,7 +8,7 @@ import server.maps.AnimatedMapleMapObject;
 import server.maps.MapleMapObjectType;
 import server.movement.LifeMovement;
 import server.movement.LifeMovementFragment;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.data.MaplePacketLittleEndianWriter;
 import packet.SpecialPacket;
 

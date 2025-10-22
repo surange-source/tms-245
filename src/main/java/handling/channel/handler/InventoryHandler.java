@@ -27,8 +27,8 @@ import server.shops.HiredMerchant;
 import server.shops.IMaplePlayerShop;
 import tools.DateUtil;
 import packet.MaplePacketCreator;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import tools.data.MaplePacketReader;
 import packet.*;
 

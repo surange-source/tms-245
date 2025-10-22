@@ -16,8 +16,8 @@ import server.maps.MapleNodes;
 import server.maps.MapleSwordNode;
 import server.movement.LifeMovementFragment;
 import tools.DateUtil;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.awt.*;

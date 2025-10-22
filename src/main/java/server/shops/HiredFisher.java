@@ -23,8 +23,8 @@ import server.maps.MapleFoothold;
 import server.maps.MapleMapObject;
 import server.maps.MapleMapObjectType;
 import server.reward.RewardDropEntry;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import packet.PlayerShopPacket;
 
 import java.sql.PreparedStatement;

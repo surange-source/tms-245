@@ -12,7 +12,7 @@ import handling.world.World;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import packet.MaplePacketCreator;
-import tools.Pair;
+import tools.types.Pair;
 import packet.MTSCSPacket;
 import tools.data.MaplePacketLittleEndianWriter;
 import tools.data.MaplePacketReader;

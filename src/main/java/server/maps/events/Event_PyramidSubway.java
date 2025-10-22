@@ -12,7 +12,7 @@ import server.life.MapleLifeFactory;
 import server.maps.MapleMap;
 import server.quest.MapleQuest;
 import packet.MaplePacketCreator;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.util.concurrent.ScheduledFuture;
 

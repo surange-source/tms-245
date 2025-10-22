@@ -17,7 +17,7 @@ import server.MapleInventoryManipulator;
 import server.MapleItemInformationProvider;
 import server.Timer;
 import packet.MaplePacketCreator;
-import tools.Pair;
+import tools.types.Pair;
 import packet.AuctionPacket;
 
 import java.sql.ResultSet;

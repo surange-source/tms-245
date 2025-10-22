@@ -18,7 +18,7 @@ import server.life.MapleLifeFactory;
 import server.life.MapleMonster;
 import server.maps.MapleMap;
 import packet.MaplePacketCreator;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.awt.*;
 

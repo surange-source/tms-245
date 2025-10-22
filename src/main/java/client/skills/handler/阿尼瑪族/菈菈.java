@@ -17,8 +17,8 @@ import server.buffs.MapleStatEffect;
 import server.maps.ForceAtomObject;
 import server.maps.MapleAffectedArea;
 import server.quest.MapleQuest;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import tools.data.MaplePacketReader;
 
 import java.awt.*;

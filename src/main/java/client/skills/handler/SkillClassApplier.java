@@ -6,7 +6,7 @@ import client.skills.SkillEntry;
 import client.status.MonsterStatus;
 import handling.channel.handler.AttackInfo;
 import server.buffs.MapleStatEffect;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.awt.*;
 import java.util.HashMap;

@@ -8,9 +8,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import provider.MapleData;
 import provider.MapleDataProviderFactory;
-import tools.Pair;
-import tools.Quadruple;
-import tools.Randomizer;
+import tools.types.Pair;
+import tools.types.Quadruple;
+import server.Randomizer;
 
 import java.util.*;
 

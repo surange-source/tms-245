@@ -20,8 +20,8 @@ import server.cashshop.CashItemInfo;
 import server.maps.AramiaFireWorks;
 import server.quest.MapleQuest;
 import tools.DateUtil;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.awt.*;

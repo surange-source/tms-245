@@ -3,7 +3,7 @@ package client.inventory;
 import client.MapleBuffStat;
 import client.MapleCharacter;
 import packet.MaplePacketCreator;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.io.Serializable;
 import java.lang.ref.WeakReference;

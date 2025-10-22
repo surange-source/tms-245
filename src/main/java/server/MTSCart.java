@@ -5,7 +5,7 @@ import client.inventory.ItemLoader;
 import client.inventory.MapleInventoryType;
 import constants.ItemConstants;
 import database.DatabaseConnectionEx;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.io.Serializable;
 import java.sql.Connection;

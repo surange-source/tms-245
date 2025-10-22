@@ -3,7 +3,7 @@ package server.shops;
 import client.MapleCharacter;
 import client.MapleClient;
 import server.shops.AbstractPlayerStore.BoughtItem;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.util.List;
 

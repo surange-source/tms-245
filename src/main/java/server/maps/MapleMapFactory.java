@@ -15,8 +15,8 @@ import server.maps.MapleNodes.MapleNodeInfo;
 import server.maps.MapleNodes.MapleNodeStopInfo;
 import server.maps.MapleNodes.MaplePlatform;
 import server.maps.field.*;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import tools.StringUtil;
 
 import java.awt.*;

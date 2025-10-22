@@ -3,7 +3,7 @@ package server;
 import provider.MapleData;
 import provider.MapleDataProviderFactory;
 import provider.MapleDataTool;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.io.File;
 import java.util.ArrayList;

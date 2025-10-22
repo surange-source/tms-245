@@ -21,6 +21,7 @@ import server.shop.*;
 import server.shops.AbstractPlayerStore;
 import server.shops.IMaplePlayerShop;
 import tools.*;
+import tools.types.*;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.awt.*;

@@ -6,7 +6,7 @@ import provider.MapleDataProviderFactory;
 import provider.MapleDataTool;
 import server.life.MapleLifeFactory;
 import server.maps.MapleMap;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.awt.*;
 import java.util.*;

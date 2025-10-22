@@ -10,7 +10,7 @@ import server.life.MapleLifeFactory;
 import server.life.MapleMonster;
 import server.maps.MapleFoothold;
 import server.maps.MapleMap;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.awt.*;
 import java.util.*;

@@ -22,8 +22,8 @@ import provider.MapleDataType;
 import server.MapleOverrideData;
 import server.MapleStatInfo;
 import tools.CaltechEval;
-import tools.Pair;
-import tools.Triple;
+import tools.types.Pair;
+import tools.types.Triple;
 
 import java.awt.*;
 import java.util.ArrayList;

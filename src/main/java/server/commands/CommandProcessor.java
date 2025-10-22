@@ -169,7 +169,8 @@ public class CommandProcessor {
         splitted[0] = splitted[0].toLowerCase();
 
         List<CommandObject> coList = new ArrayList<>();
-        boolean forceAllow = (c.getPlayer().getAccountID() == 1) || ServerConfig.FORCE_ALLOW_ALL_CMD;
+        //boolean forceAllow = (c.getPlayer().getAccountID() == 1) || ServerConfig.FORCE_ALLOW_ALL_CMD;
+        boolean forceAllow = ServerConfig.FORCE_ALLOW_ALL_CMD;
         for (PlayerRank rank : PlayerRank.values()) {
             if (!forceAllow)
             if ((rank.isGm() && c.getGmLevel() < rank.getLevel()) || (!rank.isGm() && !c.isIntern() && c.getPlayer().getMvpLevel() < rank.getLevel())) {

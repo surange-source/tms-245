@@ -9,7 +9,7 @@ import packet.MaplePacketCreator;
 import server.life.MapleLifeFactory;
 import server.life.MapleMonster;
 import tools.HexTool;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.awt.*;
 import java.util.*;

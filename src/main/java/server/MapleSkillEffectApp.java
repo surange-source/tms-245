@@ -8,7 +8,7 @@ import client.MapleBuffStat;
 import client.MapleCharacter;
 import client.skills.SkillFactory;
 import server.buffs.MapleStatEffect;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.util.List;
 

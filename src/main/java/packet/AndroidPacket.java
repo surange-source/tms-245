@@ -12,7 +12,7 @@ import constants.ItemConstants;
 import handling.opcode.MessageOpcode;
 import handling.opcode.SendPacketOpcode;
 import server.movement.LifeMovementFragment;
-import tools.Pair;
+import tools.types.Pair;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.awt.*;

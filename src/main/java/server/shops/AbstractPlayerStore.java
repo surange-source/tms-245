@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 import server.maps.MapleMap;
 import server.maps.MapleMapObject;
 import server.maps.MapleMapObjectType;
-import tools.Pair;
+import tools.types.Pair;
 import packet.PlayerShopPacket;
 
 import java.lang.ref.WeakReference;

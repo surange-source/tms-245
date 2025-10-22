@@ -13,8 +13,8 @@ import provider.MapleDataType;
 import server.buffs.MapleStatEffect;
 import server.buffs.MapleStatEffectFactory;
 import server.life.Element;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 
 import java.util.*;
 import java.util.concurrent.locks.Lock;

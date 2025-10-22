@@ -30,7 +30,7 @@ import server.movement.LifeMovementFragment;
 import server.quest.MapleQuest;
 import server.shop.MapleShop;
 import packet.MaplePacketCreator;
-import tools.Pair;
+import tools.types.Pair;
 import tools.data.MaplePacketReader;
 import tools.data.MaplePacketLittleEndianWriter;
 import packet.EffectPacket;

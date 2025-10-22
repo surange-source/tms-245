@@ -28,7 +28,7 @@ import com.alee.utils.swing.UnselectableButtonGroup;
 import launch.StartGUI;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import tools.Pair;
+import tools.types.Pair;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -166,7 +166,7 @@ public abstract class TabbedPane extends WebPanel {
             }
         };
 
-        WebButton searchButton = new WebButton(StartGUI.loadIcon("search.png")) {
+        WebButton searchButton = new WebButton("搜尋") {//StartGUI.loadIcon("search.png")) {
             {
                 setRolloverDecoratedOnly(true);
                 setDrawFocus(false);
@@ -217,7 +217,7 @@ public abstract class TabbedPane extends WebPanel {
         final WebPanel operationPane = new WebPanel();
         operationPane.add(operations, BorderLayout.WEST);
         if (showEditColumn()) {
-            operationPane.add(new WebButton("設置列", StartGUI.loadIcon("table.png")) {
+            operationPane.add(new WebButton("設置列") { //, StartGUI.loadIcon("table.png")) {
                 {
                     setRolloverDecoratedOnly(true);
                     setDrawFocus(false);
@@ -234,8 +234,8 @@ public abstract class TabbedPane extends WebPanel {
                                 final Pair<Boolean, String> pair = getAllDataTableName().get(i);
                                 final WebSwitch ws2 = new WebSwitch(pair.getLeft());
                                 ws2.setRound(11);
-                                ws2.setLeftComponent(createSwitchIcon(StartGUI.loadIcon("ok.png"), 4, 0));
-                                ws2.setRightComponent(createSwitchIcon(StartGUI.loadIcon("off.png"), 0, 4));
+//                                ws2.setLeftComponent(createSwitchIcon(StartGUI.loadIcon("ok.png"), 4, 0));
+//                                ws2.setRightComponent(createSwitchIcon(StartGUI.loadIcon("off.png"), 0, 4));
                                 ws2.addActionListener(new AbstractAction() {
                                     @Override
                                     public void actionPerformed(ActionEvent e) {
@@ -351,14 +351,14 @@ public abstract class TabbedPane extends WebPanel {
 
     protected java.util.List<Action> getActions(boolean isIDTable) {
         List<Action> ret = new ArrayList<>();
-        ret.add(getDefaultActionListener("新增", StartGUI.loadIcon("add.png"), isIDTable));
-        ret.add(getDefaultActionListener("移除", StartGUI.loadIcon("off.png"), isIDTable));
-        ret.add(getDefaultActionListener("編輯", StartGUI.loadIcon("edit.png"), isIDTable));
+        ret.add(getDefaultActionListener("新增", isIDTable));// StartGUI.loadIcon("add.png"), isIDTable));
+        ret.add(getDefaultActionListener("移除", isIDTable));// StartGUI.loadIcon("off.png"), isIDTable));
+        ret.add(getDefaultActionListener("編輯", isIDTable));// StartGUI.loadIcon("edit.png"), isIDTable));
         return ret;
     }
 
-    private Action getDefaultActionListener(final String name, final ImageIcon icon, final boolean isIDTable) {
-        return new AbstractAction(name, icon) {
+    private Action getDefaultActionListener(final String name, final boolean isIDTable) {// final ImageIcon icon, final boolean isIDTable) {
+        return new AbstractAction(name){ //, icon) {
             @Override
             public void actionPerformed(ActionEvent e) {
                 WebTable table = isIDTable ? idTable : dataTable;

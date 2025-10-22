@@ -20,7 +20,7 @@ import server.life.MobSkill;
 import server.maps.MapleMapObject;
 import server.maps.MapleMapObjectType;
 import server.maps.MapleSummon;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.data.MaplePacketLittleEndianWriter;
 import tools.data.MaplePacketReader;
 

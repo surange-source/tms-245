@@ -22,7 +22,9 @@ import server.buffs.MapleStatEffect;
 import server.maps.MapleExtractor;
 import server.maps.MapleReactor;
 import server.quest.MapleQuest;
+import server.Randomizer;
 import tools.*;
+import tools.types.*;
 import packet.EffectPacket;
 import tools.data.MaplePacketReader;
 

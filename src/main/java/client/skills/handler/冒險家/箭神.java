@@ -19,8 +19,8 @@ import server.life.MapleMonster;
 import server.life.MobSkill;
 import server.maps.MapleMapObject;
 import server.maps.MapleMapObjectType;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import tools.data.MaplePacketLittleEndianWriter;
 import tools.data.MaplePacketReader;
 

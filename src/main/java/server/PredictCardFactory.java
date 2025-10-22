@@ -8,7 +8,7 @@ import provider.MapleData;
 import provider.MapleDataProvider;
 import provider.MapleDataProviderFactory;
 import provider.MapleDataTool;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.io.File;
 import java.util.HashMap;

@@ -6,7 +6,7 @@ import client.inventory.MapleInventoryType;
 import constants.ItemConstants;
 import constants.ServerConstants;
 import database.DatabaseConnectionEx;
-import tools.Pair;
+import tools.types.Pair;
 import packet.MTSCSPacket;
 
 import java.sql.Connection;

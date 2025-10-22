@@ -18,7 +18,7 @@ import server.events.MapleDojoAgent;
 import server.maps.MapleMapObjectType;
 import tools.DateUtil;
 import packet.MaplePacketCreator;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.awt.*;
 import java.util.*;

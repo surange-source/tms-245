@@ -29,7 +29,7 @@ import server.cashshop.CashItemFactory;
 import server.cashshop.CashItemInfo;
 import server.cashshop.CashItemInfo.CashModInfo;
 import server.cashshop.CashShopType;
-import tools.Pair;
+import tools.types.Pair;
 import tools.StringUtil;
 
 import javax.swing.*;

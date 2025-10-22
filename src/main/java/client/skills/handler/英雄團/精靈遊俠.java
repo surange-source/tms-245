@@ -17,7 +17,7 @@ import packet.MaplePacketCreator;
 import server.MapleStatInfo;
 import server.buffs.MapleStatEffect;
 import server.maps.ForceAtomObject;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.data.MaplePacketReader;
 
 import java.awt.*;

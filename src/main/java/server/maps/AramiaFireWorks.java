@@ -6,7 +6,7 @@ import server.MapleItemInformationProvider;
 import server.Timer.EventTimer;
 import server.life.MapleLifeFactory;
 import packet.MaplePacketCreator;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.awt.*;
 

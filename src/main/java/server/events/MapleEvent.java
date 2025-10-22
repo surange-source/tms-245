@@ -12,7 +12,7 @@ import server.maps.MapleMap;
 import server.maps.SavedLocationType;
 import tools.DateUtil;
 import packet.MaplePacketCreator;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.StringUtil;
 
 public abstract class MapleEvent {

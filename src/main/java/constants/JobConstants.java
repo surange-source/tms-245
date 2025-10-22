@@ -7,7 +7,7 @@ package constants;
 
 import client.MapleJob;
 import constants.skills.*;
-import tools.Pair;
+import tools.types.Pair;
 
 public class JobConstants {
 

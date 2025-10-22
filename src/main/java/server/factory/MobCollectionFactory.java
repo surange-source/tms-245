@@ -11,8 +11,8 @@ import server.collection.MobCollectionRecord;
 import server.life.MapleLifeFactory;
 import server.life.MapleMonster;
 import packet.MaplePacketCreator;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import packet.EffectPacket;
 
 import java.util.*;

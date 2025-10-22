@@ -11,7 +11,7 @@ import server.maps.MapleAffectedArea;
 import server.maps.MapleFoothold;
 import packet.MaplePacketCreator;
 import server.maps.field.BossLucidField;
-import tools.Randomizer;
+import server.Randomizer;
 import packet.EffectPacket;
 import packet.MobPacket;
 import tools.data.MaplePacketReader;

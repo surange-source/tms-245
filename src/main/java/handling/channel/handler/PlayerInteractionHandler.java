@@ -23,7 +23,7 @@ import server.maps.MapleMapObjectType;
 import server.shops.*;
 import tools.DateUtil;
 import packet.MaplePacketCreator;
-import tools.Pair;
+import tools.types.Pair;
 import tools.StringUtil;
 import packet.PlayerShopPacket;
 import tools.data.MaplePacketLittleEndianWriter;

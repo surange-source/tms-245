@@ -2,7 +2,7 @@ package client;
 
 import constants.JobConstants;
 import server.MapleUnionData;
-import tools.Triple;
+import tools.types.Triple;
 
 import java.awt.Point;
 import java.util.*;

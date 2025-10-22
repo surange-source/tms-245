@@ -19,7 +19,7 @@ import server.maps.MapleMap;
 import server.maps.MapleReactor;
 import server.maps.MapleReactorFactory;
 import tools.DateUtil;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.awt.*;
 import java.sql.Connection;

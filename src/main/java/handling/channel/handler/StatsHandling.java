@@ -13,7 +13,7 @@ import constants.JobConstants;
 import constants.SkillConstants;
 import constants.skills.凱內西斯;
 import packet.MaplePacketCreator;
-import tools.Pair;
+import tools.types.Pair;
 import tools.data.MaplePacketReader;
 
 import java.util.*;

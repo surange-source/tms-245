@@ -6,7 +6,7 @@ import scripting.event.EventInstanceManager;
 import scripting.event.EventManager;
 import server.life.MapleMonster;
 import server.maps.MapleMap;
-import tools.Randomizer;
+import server.Randomizer;
 
 public class EliteBoss extends AbstractEventScript {
 

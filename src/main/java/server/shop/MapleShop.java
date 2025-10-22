@@ -17,7 +17,7 @@ import server.MapleInventoryManipulator;
 import server.MapleItemInformationProvider;
 import server.buffs.MapleStatEffect;
 import tools.DateUtil;
-import tools.Pair;
+import tools.types.Pair;
 import packet.InventoryPacket;
 import packet.NPCPacket;
 

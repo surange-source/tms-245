@@ -13,8 +13,8 @@ import server.MapleInventoryManipulator;
 import server.MapleItemInformationProvider;
 import server.StructItemOption;
 import tools.DateUtil;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import packet.InventoryPacket;
 
 import java.io.Serializable;

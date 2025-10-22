@@ -15,7 +15,7 @@ import server.life.ElementalEffectiveness;
 import server.life.MapleMonster;
 import server.maps.MapleMapObjectType;
 import tools.CRand32;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.math.BigInteger;
 import java.util.Collections;

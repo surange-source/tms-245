@@ -36,9 +36,9 @@ import server.life.Element;
 import server.life.MapleMonster;
 import server.life.MobSkill;
 import server.maps.*;
-import tools.Pair;
-import tools.Randomizer;
-import tools.Triple;
+import tools.types.Pair;
+import server.Randomizer;
+import tools.types.Triple;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.awt.*;

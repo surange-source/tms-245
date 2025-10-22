@@ -1,8 +1,7 @@
 package auth.client;
 
 import tools.CRand32;
-import tools.Randomizer;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.io.Serializable;
 

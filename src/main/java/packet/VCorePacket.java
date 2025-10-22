@@ -68,7 +68,7 @@ public final class VCorePacket {
             mplew.writeInt(it.getValue().getSkill3());
             mplew.writeInt(it.getValue().getIndex());//V.153 new
             PacketHelper.addExpirationTime(mplew, it.getValue().getDateExpire());
-            mplew.writeByte(0);//V.181 new
+            mplew.write(0);//V.181 new
         }
         //V.153 new:
         mplew.writeInt(player.getVMatrixSlot().size());

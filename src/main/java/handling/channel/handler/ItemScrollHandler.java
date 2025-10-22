@@ -19,7 +19,7 @@ import server.MapleInventoryManipulator;
 import server.MapleItemInformationProvider;
 import packet.MaplePacketCreator;
 import server.commands.PlayerRank;
-import tools.Randomizer;
+import server.Randomizer;
 import packet.InventoryPacket;
 import tools.data.MaplePacketReader;
 

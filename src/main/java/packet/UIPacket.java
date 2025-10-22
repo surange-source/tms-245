@@ -7,8 +7,8 @@ import handling.opcode.SendPacketOpcode;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import server.events.DimensionMirrorEvent;
-import tools.Pair;
-import tools.Triple;
+import tools.types.Pair;
+import tools.types.Triple;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.util.List;

@@ -2,7 +2,7 @@ package client;
 
 import server.MapleInventoryManipulator;
 import packet.MaplePacketCreator;
-import tools.Randomizer;
+import server.Randomizer;
 
 public class RockPaperScissors {
 

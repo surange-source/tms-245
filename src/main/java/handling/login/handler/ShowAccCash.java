@@ -7,7 +7,7 @@ package handling.login.handler;
 import client.MapleCharacterUtil;
 import client.MapleClient;
 import packet.MaplePacketCreator;
-import tools.Pair;
+import tools.types.Pair;
 import packet.LoginPacket;
 import tools.data.MaplePacketReader;
 

@@ -10,7 +10,7 @@ import database.DatabaseConnectionEx;
 import database.tools.SqlTool;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import tools.Pair;
+import tools.types.Pair;
 import packet.NPCPacket;
 
 import java.sql.Connection;

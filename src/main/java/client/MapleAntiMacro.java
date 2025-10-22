@@ -9,8 +9,8 @@ import server.Timer;
 import server.maps.MapleMap;
 import server.quest.MapleQuest;
 import tools.CheckCodeImageCreator;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 
 import java.io.File;
 import java.util.Calendar;

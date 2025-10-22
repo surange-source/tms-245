@@ -16,7 +16,7 @@ import org.apache.logging.log4j.Logger;
 import server.buffs.MapleStatEffect;
 import server.life.MobSkill;
 import tools.DateUtil;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.util.*;

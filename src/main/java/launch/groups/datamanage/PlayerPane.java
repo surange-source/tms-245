@@ -24,7 +24,7 @@ import server.ShutdownServer;
 import server.maps.MapleMap;
 import server.maps.MapleMapFactory;
 import tools.DateUtil;
-import tools.Pair;
+import tools.types.Pair;
 import tools.StringUtil;
 
 import javax.swing.*;
@@ -376,8 +376,8 @@ public class PlayerPane extends TabbedPane {
                 if (entry.getValue() instanceof Boolean) {
                     final WebSwitch ws2 = new WebSwitch(Boolean.valueOf(entry.getValue().toString()));
                     ws2.setRound((int) (launch.StartGUI.DPI * 11));
-                    ws2.setLeftComponent(createSwitchIcon(StartGUI.loadIcon("ok.png"), 4, 0));
-                    ws2.setRightComponent(createSwitchIcon(StartGUI.loadIcon("off.png"), 0, 4));
+//                    ws2.setLeftComponent(createSwitchIcon(StartGUI.loadIcon("ok.png"), 4, 0));
+//                    ws2.setRightComponent(createSwitchIcon(StartGUI.loadIcon("off.png"), 0, 4));
                     ws2.addActionListener(e -> entry.setValue(ws2.isSelected()));
                     groupPanel.add(new GroupPanel(ws2), "1," + i);
                 } else {

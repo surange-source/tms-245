@@ -21,7 +21,7 @@ import server.shops.HiredFisher;
 import server.shops.HiredMerchant;
 import server.squad.MapleSquad;
 import server.squad.MapleSquadType;
-import tools.ConcurrentEnumMap;
+import tools.types.ConcurrentEnumMap;
 
 import java.util.*;
 import java.util.concurrent.ExecutorService;

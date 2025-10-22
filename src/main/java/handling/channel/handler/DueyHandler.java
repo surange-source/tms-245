@@ -15,7 +15,7 @@ import server.MapleDueyActions;
 import server.MapleInventoryManipulator;
 import server.MapleItemInformationProvider;
 import packet.MaplePacketCreator;
-import tools.Pair;
+import tools.types.Pair;
 import tools.data.MaplePacketReader;
 
 import java.sql.Connection;

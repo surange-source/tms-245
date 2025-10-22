@@ -12,7 +12,7 @@ import client.stat.PlayerStats;
 import client.status.MonsterStatus;
 import constants.skills.*;
 import server.buffs.MapleStatEffect;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.util.*;
 

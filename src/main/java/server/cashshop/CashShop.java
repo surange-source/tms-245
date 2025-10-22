@@ -7,7 +7,7 @@ import database.DatabaseConnectionEx;
 import server.MapleInventoryManipulator;
 import server.MapleItemInformationProvider;
 import tools.DateUtil;
-import tools.Pair;
+import tools.types.Pair;
 import packet.MTSCSPacket;
 
 import java.io.Serializable;

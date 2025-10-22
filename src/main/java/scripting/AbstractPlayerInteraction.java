@@ -17,7 +17,6 @@ import database.DatabaseConnection;
 import database.DatabaseConnectionEx;
 import database.dao.AccountDao;
 import database.tools.SqlTool;
-import ecpay.EcpayPayment;
 import handling.channel.ChannelServer;
 import handling.channel.handler.InterServerHandler;
 import handling.channel.handler.PlayerHandler;
@@ -50,6 +49,7 @@ import server.life.*;
 import server.maps.*;
 import server.quest.MapleQuest;
 import tools.*;
+import tools.types.*;
 import tools.data.MaplePacketLittleEndianWriter;
 import tools.json.JSONObject;
 
@@ -4967,27 +4967,5 @@ public abstract class AbstractPlayerInteraction extends CommonActionManager{
             return false;
         }
         return true;
-    }
-
-    public String getPayInfoCVS(int amount) {
-        if (ServerConfig.MIN_DONATE > amount || amount > 6000) {
-            return "※超商代碼繳費捐贈金額必須在 " + ServerConfig.MIN_DONATE + " 以上 6000 以下,閣下輸入的金額不在範圍內,請重新嘗試。";
-        }
-        return EcpayPayment.getPayInfoCVS(EcpayPayment.genAioCheckOutCVS(getPlayer(), String.valueOf(amount)));
-    }
-
-    public String getPayInfoCvv(int amount) {
-        if (ServerConfig.MIN_DONATE > amount || amount > 20000) {
-            return "※信用卡繳費捐贈金額必須在 " + ServerConfig.MIN_DONATE + " 以上 20000 以下,閣下輸入的金額不在範圍內,請重新嘗試。";
-        }
-        String var10003 = EcpayPayment.genAioCheckOutCVV(getPlayer(), String.valueOf(amount));
-        return "一次性贊助網址:\r\n" + EcpayPayment.getPayInfoCVV(getClient().getAccountName(), var10003);
-    }
-
-    public String getPayInfoATM(int amount) {
-        if (ServerConfig.MIN_DONATE > amount || amount > 20000) {
-            return "※atm轉帳繳費捐贈金額必須在 " + ServerConfig.MIN_DONATE + " 以上 20000 以下,閣下輸入的金額不在範圍內,請重新嘗試。";
-        }
-        return EcpayPayment.getPayInfoATM(EcpayPayment.genAioCheckOutATM(getPlayer(), String.valueOf(amount), "CHINATRUST"));
     }
 }

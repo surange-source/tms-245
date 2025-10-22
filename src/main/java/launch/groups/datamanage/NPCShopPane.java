@@ -6,7 +6,7 @@ import server.life.MapleLifeFactory;
 import server.shop.MapleShop;
 import server.shop.MapleShopFactory;
 import server.shop.MapleShopItem;
-import tools.Pair;
+import tools.types.Pair;
 
 import javax.swing.table.DefaultTableModel;
 import java.util.*;

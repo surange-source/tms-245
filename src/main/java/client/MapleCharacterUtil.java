@@ -9,8 +9,8 @@ import handling.world.WorldFindService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import server.MapleItemInformationProvider;
-import tools.Pair;
-import tools.Triple;
+import tools.types.Pair;
+import tools.types.Triple;
 import packet.MTSCSPacket;
 
 import java.nio.charset.Charset;

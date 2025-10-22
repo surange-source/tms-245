@@ -7,7 +7,7 @@ import database.DatabaseConnectionEx;
 import database.tools.SqlTool;
 import handling.world.WorldFamilyService;
 import handling.world.WorldGuildService;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

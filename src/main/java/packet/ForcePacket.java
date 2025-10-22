@@ -6,8 +6,8 @@ import constants.skills.*;
 import handling.opcode.SendPacketOpcode;
 import server.life.MapleMonster;
 import tools.DateUtil;
-import tools.Randomizer;
-import tools.Triple;
+import server.Randomizer;
+import tools.types.Triple;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.util.List;

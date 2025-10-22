@@ -5,7 +5,7 @@ import constants.JobConstants;
 import provider.MapleData;
 import provider.MapleDataProviderFactory;
 import provider.MapleDataTool;
-import tools.Triple;
+import tools.types.Triple;
 
 import java.awt.*;
 import java.io.File;

@@ -35,9 +35,9 @@ import server.maps.MapleMapObjectType;
 import server.movement.AbsoluteLifeMovement;
 import server.movement.LifeMovementFragment;
 import tools.DateUtil;
-import tools.Pair;
-import tools.Randomizer;
-import tools.Triple;
+import tools.types.Pair;
+import server.Randomizer;
+import tools.types.Triple;
 
 import java.awt.*;
 import java.lang.ref.WeakReference;
@@ -1427,7 +1427,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
                 }
                 break;
             case 8820304: //混沌皮卡啾
-                MapleMonster linkMob_1 = MapleLifeFactory.getMonster(getId() - 190);
+                MapleMonster linkMob_1 = MapleLifeFactory.getMonster(getId() - 93);
                 if (linkMob_1 != null) {
                     toSpawn = linkMob_1.getStats().getRevives();
                 }
@@ -1444,7 +1444,8 @@ public class MapleMonster extends AbstractLoadedMapleLife {
             case 8820208: //混沌皮卡啾
             case 8820209: //混沌皮卡啾
             case 8820210: //混沌皮卡啾
-            case 8820211: {//混沌皮卡啾
+            case 8820211: //混沌皮卡啾
+            {
                 for (int i : toSpawn) {
                     MapleMonster mob = MapleLifeFactory.getMonster(i);
                     if (eventInstance != null) {

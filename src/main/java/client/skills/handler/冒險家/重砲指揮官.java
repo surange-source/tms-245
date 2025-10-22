@@ -15,7 +15,7 @@ import packet.MaplePacketCreator;
 import server.MapleStatInfo;
 import server.buffs.MapleStatEffect;
 import server.life.MapleMonster;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.data.MaplePacketLittleEndianWriter;
 import tools.data.MaplePacketReader;
 

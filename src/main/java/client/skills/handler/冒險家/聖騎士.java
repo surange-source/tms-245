@@ -19,7 +19,7 @@ import packet.MaplePacketCreator;
 import server.MapleStatInfo;
 import server.buffs.MapleStatEffect;
 import server.life.MapleMonster;
-import tools.Pair;
+import tools.types.Pair;
 import tools.data.MaplePacketLittleEndianWriter;
 import tools.data.MaplePacketReader;
 

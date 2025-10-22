@@ -16,7 +16,7 @@ import server.MapleItemInformationProvider;
 import server.MerchItemPackage;
 import server.shops.HiredMerchant;
 import tools.DateUtil;
-import tools.Pair;
+import tools.types.Pair;
 import packet.PlayerShopPacket;
 import tools.data.MaplePacketReader;
 

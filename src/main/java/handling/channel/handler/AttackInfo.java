@@ -2,7 +2,7 @@ package handling.channel.handler;
 
 import handling.opcode.SendPacketOpcode;
 import server.movement.LifeMovementFragment;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.awt.*;
 import java.util.ArrayList;

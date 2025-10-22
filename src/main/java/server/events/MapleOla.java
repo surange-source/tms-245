@@ -1,7 +1,7 @@
 package server.events;
 
 import client.MapleCharacter;
-import tools.Randomizer;
+import server.Randomizer;
 
 public class MapleOla extends MapleSurvival { //survival/ola so similar.
 

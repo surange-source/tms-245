@@ -16,7 +16,7 @@ import packet.MaplePacketCreator;
 import packet.PacketHelper;
 import server.MapleInventoryManipulator;
 import server.MapleItemInformationProvider;
-import tools.Pair;
+import tools.types.Pair;
 import tools.data.MaplePacketLittleEndianWriter;
 import tools.data.MaplePacketReader;
 

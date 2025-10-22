@@ -23,7 +23,7 @@ public class TestLoginPane extends WebFrame {
     
     TestLoginPane() {
     	super("單機登入");
-    	setIconImage(StartGUI.getMainIcon().getImage());
+    	//setIconImage(StartGUI.getMainIcon().getImage());
     	account.setText("admin");
     	password.setText("admin");
     	account.setEditable(true);

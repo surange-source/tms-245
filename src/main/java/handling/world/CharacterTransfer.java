@@ -10,7 +10,7 @@ import client.skills.SkillMacro;
 import server.MapleTrunk;
 import server.cashshop.CashShop;
 import server.shop.MapleShopItem;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.util.*;
 import java.util.Map.Entry;

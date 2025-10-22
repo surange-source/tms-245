@@ -10,6 +10,7 @@ import handling.login.LoginServer;
 import handling.login.LoginWorker;
 import packet.MaplePacketCreator;
 import tools.*;
+import tools.types.*;
 import packet.LoginPacket;
 import tools.data.MaplePacketReader;
 

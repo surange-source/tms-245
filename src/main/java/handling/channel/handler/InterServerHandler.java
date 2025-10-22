@@ -35,6 +35,7 @@ import server.maps.FieldLimitType;
 import server.quest.MapleQuest;
 import server.shops.HiredMerchant;
 import tools.*;
+import tools.types.*;
 import packet.*;
 import tools.data.MaplePacketLittleEndianWriter;
 import tools.data.MaplePacketReader;

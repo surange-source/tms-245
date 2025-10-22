@@ -27,7 +27,7 @@ import launch.StartGUI;
 import server.MapleItemInformationProvider;
 import server.RaffleItem;
 import server.RafflePool;
-import tools.Pair;
+import tools.types.Pair;
 import tools.StringUtil;
 
 import javax.swing.*;
@@ -347,7 +347,7 @@ public class RafflePane extends TabbedPane {
             alltype.addActionListener(new ChangeTypeActionListener(0));
             uptype.addActionListener(new ChangeTypeActionListener(1));
             downtype.addActionListener(new ChangeTypeActionListener(2));
-            WebButton addItem = new WebButton("新增", StartGUI.loadIcon("add.png")) {
+            WebButton addItem = new WebButton("新增") {//, StartGUI.loadIcon("add.png")) {
                 {
                     setRolloverDecoratedOnly(true);
                     setDrawFocus(false);

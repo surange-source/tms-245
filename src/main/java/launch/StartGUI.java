@@ -134,7 +134,7 @@ public class StartGUI extends WebFrame implements GuiListener {
         WebPanel contentPane = new WebPanel();
         contentPane.setPreferredSize((int) (DPI * 1000), (int) (DPI * 600));
         setMinimumSize(contentPane.getPreferredSize());
-        setIconImage(getMainIcon().getImage());
+        //setIconImage(getMainIcon().getImage());
         setLayout(new BorderLayout());
         String server_version = "Build." + Config.getServerBuildVersion();
 
@@ -173,7 +173,7 @@ public class StartGUI extends WebFrame implements GuiListener {
     public static StartGUI getInstance() {
         return instance;
     }
-
+/*
     public static ImageIcon loadIcon(final String path) {
 //        return new ImageIcon(StartGUI.class.getClass().getResource("/image/" + path));
         return new ImageIcon("Icon.png");
@@ -182,7 +182,7 @@ public class StartGUI extends WebFrame implements GuiListener {
     public static ImageIcon getMainIcon() {
         return loadIcon("Icon.png");
     }
-
+*/
     public static void showMessage(String error, String title, int type) {
         WebOptionPane.showMessageDialog(null, error, title, type);
     }
@@ -255,7 +255,7 @@ public class StartGUI extends WebFrame implements GuiListener {
         final WebButton testButton = new WebButton("測試按鍵", e -> {
             if (Config.isDevelop()) {
                 new Thread(() -> {
-                    ScriptEngine se = new ScriptEngineManager().getEngineByName("nashorn");
+                    ScriptEngine se = new ScriptEngineManager().getEngineByName("graal.js");
                     try {
                         if ((new File("./test.js")).exists()) {
                             se.eval("load(\"./test.js\")");
@@ -276,9 +276,9 @@ public class StartGUI extends WebFrame implements GuiListener {
         });
         reloadOP.setMargin(5, 10, 5, 10);
 
-        final ImageIcon start = loadIcon("start.png");
-        final ImageIcon stop = loadIcon("stop.png");
-        startServer = new WebButton("啟動伺服端", start);
+//        final ImageIcon start = loadIcon("start.png");
+//        final ImageIcon stop = loadIcon("stop.png");
+        startServer = new WebButton("啟動伺服端");//, start);
         final WebProgressOverlay progressOverlay = new WebProgressOverlay();
         progressOverlay.setConsumeEvents(false);
         startServer.setMargin(5, 10, 5, 10);
@@ -310,7 +310,7 @@ public class StartGUI extends WebFrame implements GuiListener {
 
             progressOverlay.setShowLoad(showLoad);
             startServer.setText(showLoad ? "停止伺服端" : "啟動伺服端");
-            startServer.setIcon(showLoad ? stop : start);
+//            startServer.setIcon(showLoad ? stop : start);
         });
 
         menuPane.add(new GroupPanel(false,
@@ -428,7 +428,7 @@ public class StartGUI extends WebFrame implements GuiListener {
     private Component createStatusBar() {
         final WebPanel contentPane = new WebPanel(new BorderLayout(5, 5));
         final WebStatusBar statusBar = new WebStatusBar();
-
+/*
         WebLabel authLimitTime = new WebLabel() {
             @Override
             public void setText(String text) {
@@ -441,7 +441,7 @@ public class StartGUI extends WebFrame implements GuiListener {
         }
         authLimitTime.setText(new SimpleDateFormat("yyyy-MM-dd").format(deadLine));
         statusBar.add(authLimitTime);
-        statusBar.addSeparator();
+        statusBar.addSeparator();*/
         WebLabel text = new WebLabel();
         text.setText("源代碼來自網路，僅供學習交流，請於下載後24小時內刪除！");
         statusBar.add(text);
@@ -453,7 +453,7 @@ public class StartGUI extends WebFrame implements GuiListener {
 
         WebMemoryBar memoryBar = new WebMemoryBar();
         memoryBar.setShowMaximumMemory(false);
-        memoryBar.setPreferredWidth(memoryBar.getPreferredSize().width + 20);
+        memoryBar.setPreferredWidth(memoryBar.getPreferredSize().width + 36);
         statusBar.addToEnd(memoryBar);
 
         contentPane.add(createBroadCastMsg(), BorderLayout.NORTH);

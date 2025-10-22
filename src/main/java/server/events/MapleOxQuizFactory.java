@@ -1,8 +1,8 @@
 package server.events;
 
 import database.DatabaseConnectionEx;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

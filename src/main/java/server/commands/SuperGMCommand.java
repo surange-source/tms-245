@@ -25,7 +25,7 @@ import server.quest.MapleQuest;
 import server.squad.MapleSquad;
 import tools.DateUtil;
 import tools.HexTool;
-import tools.Pair;
+import tools.types.Pair;
 import tools.StringUtil;
 
 import java.awt.*;

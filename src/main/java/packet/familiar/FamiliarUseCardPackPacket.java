@@ -1,6 +1,6 @@
 package packet.familiar;
 
-import tools.Pair;
+import tools.types.Pair;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.util.List;

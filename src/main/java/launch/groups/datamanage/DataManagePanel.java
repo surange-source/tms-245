@@ -17,7 +17,7 @@ public class DataManagePanel extends WebFrame {
     public DataManagePanel() {
         setPreferredSize(new Dimension((int) (launch.StartGUI.DPI * 1366), (int) (launch.StartGUI.DPI * 800)));
         setTitle("數據管理界面");
-        setIconImage(StartGUI.getMainIcon().getImage());
+        //setIconImage(StartGUI.getMainIcon().getImage());
 
         final WebTabbedPane tabbedPane = new WebTabbedPane() {
             @Override

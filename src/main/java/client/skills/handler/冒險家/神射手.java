@@ -12,8 +12,8 @@ import server.MapleStatInfo;
 import server.buffs.MapleStatEffect;
 import server.life.MapleMonster;
 import server.life.MobSkill;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import tools.data.MaplePacketLittleEndianWriter;
 import tools.data.MaplePacketReader;
 

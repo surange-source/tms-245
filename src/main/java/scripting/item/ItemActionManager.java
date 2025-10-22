@@ -21,7 +21,7 @@ import scripting.npc.NPCScriptManager;
 import server.MapleInventoryManipulator;
 import packet.MaplePacketCreator;
 import server.quest.MapleQuest;
-import tools.Randomizer;
+import server.Randomizer;
 
 import javax.script.Invocable;
 

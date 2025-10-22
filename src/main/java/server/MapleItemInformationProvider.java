@@ -21,6 +21,7 @@ import server.buffs.MapleStatEffectFactory;
 import server.collection.SoulCollectionEntry;
 import server.factory.MobCollectionFactory;
 import tools.*;
+import tools.types.*;
 import tools.json.JSONObject;
 
 import java.awt.*;

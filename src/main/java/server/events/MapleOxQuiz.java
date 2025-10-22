@@ -6,7 +6,7 @@ import server.Timer.EventTimer;
 import server.events.MapleOxQuizFactory.MapleOxQuizEntry;
 import server.maps.MapleMap;
 import packet.MaplePacketCreator;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.util.Map.Entry;
 import java.util.concurrent.ScheduledFuture;

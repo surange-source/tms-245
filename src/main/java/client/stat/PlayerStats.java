@@ -25,7 +25,7 @@ import server.MapleStatInfo;
 import server.buffs.MapleStatEffect;
 import server.collection.SoulCollectionEntry;
 import server.life.Element;
-import tools.Pair;
+import tools.types.Pair;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.util.*;

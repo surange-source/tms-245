@@ -11,8 +11,8 @@ import server.collection.MobCollectionGroup;
 import server.collection.MobCollectionRecord;
 import server.factory.MobCollectionFactory;
 import tools.DateUtil;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import tools.StringTool;
 import tools.data.MaplePacketReader;
 

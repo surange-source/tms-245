@@ -12,7 +12,7 @@ import constants.ItemConstants;
 import constants.enums.UserChatMessageType;
 import server.MapleInventoryManipulator;
 import server.MapleItemInformationProvider;
-import tools.Randomizer;
+import server.Randomizer;
 import packet.MTSCSPacket;
 import tools.data.MaplePacketReader;
 

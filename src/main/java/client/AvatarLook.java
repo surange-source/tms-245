@@ -43,28 +43,28 @@ public class AvatarLook {
         p.write(avatarLook.getSkin());
         p.writeInt(avatarLook.getFace());
         p.writeInt(avatarLook.getJob());
-        p.writeByte(mega ? 0 : 1);
+        p.write(mega ? 0 : 1);
         p.writeInt(avatarLook.getHair());
         for (Entry<Byte, Integer> entry : avatarLook.getEquips().entrySet()) {
             p.write(entry.getKey());
             p.writeInt(entry.getValue());
         }
-        p.writeByte(0xFF);
+        p.write(0xFF);
         for (Entry<Byte, Integer> entry : avatarLook.getMaskedEquips().entrySet()) {
             p.write(entry.getKey());
             p.writeInt(entry.getValue());
         }
-        p.writeByte(0xFF);
+        p.write(0xFF);
         for (Entry<Byte, Integer> entry : avatarLook.getEquipMixColors().entrySet()) {
             p.write(entry.getKey());
             p.writeInt(entry.getValue());
         }
-        p.writeByte(0xFF);
+        p.write(0xFF);
         for (Entry<Byte, Integer> entry : avatarLook.getTotemEquips().entrySet()) {
             p.write(entry.getKey());
             p.writeInt(entry.getValue());
         }
-        p.writeByte(0xFF);
+        p.write(0xFF);
         p.writeInt(avatarLook.getCashWeaponId());
         p.writeInt(avatarLook.getWeaponId());
         p.writeInt(avatarLook.getShieldId());

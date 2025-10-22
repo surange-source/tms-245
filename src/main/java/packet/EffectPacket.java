@@ -13,8 +13,8 @@ import handling.opcode.MessageOpcode;
 import handling.opcode.SendPacketOpcode;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.awt.*;

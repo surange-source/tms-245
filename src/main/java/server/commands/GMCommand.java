@@ -12,6 +12,7 @@ import configs.ServerConfig;
 import constants.GameConstants;
 import constants.ItemConstants;
 import constants.JobConstants;
+import constants.skills.管理員;
 import handling.channel.ChannelServer;
 import handling.world.WorldBroadcastService;
 import org.apache.logging.log4j.LogManager;
@@ -131,6 +132,29 @@ public class GMCommand {
                 player.setInvincible(true);
                 player.resetAllCooldowns(false);
                 player.dropMessage(6, "無敵模式開啟");
+            }
+            return 1;
+        }
+    }
+
+    public static class 解除GM implements CommandExecute {
+
+        @Override
+        public String getShortCommand() {
+            return "UnGM";
+        }
+
+        @Override
+        public int execute(MapleClient c, String[] splitted) {
+            MapleCharacter player = c.getPlayer();
+            if (player.isInvincible()) {
+                player.setInvincible(false);
+                player.dropMessage(6, "無敵模式關閉");
+            }
+            Skill skill = SkillFactory.getSkill(管理員.終極隱藏);
+            if (c.getPlayer().isHidden()) {
+                c.getPlayer().cancelEffect(skill.getEffect(1), false, -1);
+                c.getPlayer().dropMessage(6, "隱藏已關閉。");
             }
             return 1;
         }

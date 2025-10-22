@@ -16,8 +16,8 @@ import server.buffs.MapleStatEffect;
 import server.life.MapleMonster;
 import server.maps.MapleMapObject;
 import server.maps.MapleMapObjectType;
-import tools.Randomizer;
-import tools.Triple;
+import server.Randomizer;
+import tools.types.Triple;
 import tools.data.MaplePacketReader;
 
 import java.lang.reflect.Field;

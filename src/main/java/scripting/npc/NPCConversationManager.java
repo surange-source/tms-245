@@ -45,6 +45,7 @@ import server.quest.MapleQuestRequirementType;
 import server.shop.MapleShopFactory;
 import server.squad.MapleSquad;
 import tools.*;
+import tools.types.*;
 
 import javax.script.Invocable;
 import java.sql.Connection;
@@ -3167,6 +3168,10 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
 
     public boolean isEligibleName(String t) {
         return checkCreateCharacterName(t);
+    }
+
+    public boolean isGM() {
+        return getPlayer().isGm();
     }
 
     public String checkDrop(int mobId) {

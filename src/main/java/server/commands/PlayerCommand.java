@@ -27,7 +27,96 @@ public class PlayerCommand {
     public static PlayerRank getPlayerLevelRequired() {
         return PlayerRank.普通;
     }
+//
+    public static class 販賣 implements CommandExecute {
 
+        @Override
+        public String getShortCommand() {
+            return "Sell";
+        }
+
+        public void showDescription(MapleClient c, String[] splitted) {
+            c.getPlayer().dropMessage(6, splitted[0] + " <類別，1=裝備,2=消耗,3=其他,4=裝飾,5=特殊,6=時裝> <從欄位> <至欄位> - 販賣背包");
+        }
+
+        @Override
+        public int execute(MapleClient c, String[] splitted) {
+            if (splitted.length < 4 || !StringUtil.isNaturalNumber(splitted[1]) || !StringUtil.isNaturalNumber(splitted[2]) || !StringUtil.isNaturalNumber(splitted[3])) {
+                showDescription(c, splitted);
+                return 1;
+            }
+
+            long totalRemoveSlot;
+            MapleInventoryType type = null;
+            MapleInventory inventory;
+            int startSlot = (int) Math.max(1, Long.parseLong(splitted[2]));
+            int endSlot = (int) Math.min(128, Long.parseLong(splitted[3]));
+
+            switch (splitted[1]) {
+                case "1":
+                    type = MapleInventoryType.EQUIP;
+                    break;
+                case "2":
+                    type = MapleInventoryType.USE;
+                    break;
+                case "3":
+                    type = MapleInventoryType.ETC;
+                    break;
+                case "4":
+                    type = MapleInventoryType.SETUP;
+                    break;
+                case "5":
+                    type = MapleInventoryType.CASH;
+                    break;
+                case "6":
+                    type = MapleInventoryType.DECORATION;
+                    break;
+            }
+
+            if (type == null) {
+                showDescription(c, splitted);
+                return 1;
+            }
+
+            inventory = c.getPlayer().getInventory(type);
+            if (inventory == null) {
+                c.getPlayer().dropMessage(6, "發生未知的錯誤");
+                return 1;
+            }
+            StringBuilder sb = new StringBuilder();
+            totalRemoveSlot = 0L;
+
+            int count = 0;
+            for (short slot = (short) startSlot; slot <= endSlot; slot++) {
+                Item item = inventory.getItem(slot);
+                if (item == null) {
+                    continue;
+                }
+                int qua = item.getQuantity();
+                int price = new Double(MapleItemInformationProvider.getInstance().getPrice(item.getItemId())).intValue();
+                if(price > 0 && !MapleItemInformationProvider.getInstance().isCash(item.getItemId())){
+                    count += (price * qua);
+                }
+                String name = MapleItemInformationProvider.getInstance().getName(item.getItemId());
+                sb.append(name);// 道具名稱
+                sb.append("(");
+                sb.append(item.getItemId());// 道具代碼
+                sb.append(")");
+                sb.append(qua);// 道具數量
+                sb.append("個、");
+                totalRemoveSlot += qua;
+                MapleInventoryManipulator.removeFromSlot(c, type, slot, (short) qua, false);
+                c.announce(MaplePacketCreator.getShowItemGain(item.getItemId(), (short) -qua, true));
+            }
+            if(count > 0) {
+                c.getPlayer().gainMeso(count, true, true);
+            }
+            FileoutputUtil.logToFile("logs/data/清除道具.txt", "\r\n " + FileoutputUtil.NowTime() + " IP: " + c.getSession().remoteAddress().toString().split(":")[0] + " 帳號: " + c.getAccountName() + " 玩家: " + c.getPlayer().getName() + " 使用了指令 " + StringUtil.joinStringFrom(splitted, 0) + " 道具:" + sb.toString());
+            c.getPlayer().dropMessage(6, " 清理了" + type.getName() + "類從" + startSlot + "到" + endSlot + "共" + totalRemoveSlot + "個道具");
+            return 1;
+        }
+    }
+//  
     public static class 清除 implements CommandExecute {
 
         @Override

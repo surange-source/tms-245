@@ -5,7 +5,7 @@
 package client;
 
 import database.DatabaseConnectionEx;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

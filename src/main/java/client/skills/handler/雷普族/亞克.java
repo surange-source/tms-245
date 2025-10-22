@@ -20,7 +20,7 @@ import server.MapleStatInfo;
 import server.buffs.MapleStatEffect;
 import server.maps.MapleMapObject;
 import server.maps.MapleMapObjectType;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.data.MaplePacketLittleEndianWriter;
 import tools.data.MaplePacketReader;
 

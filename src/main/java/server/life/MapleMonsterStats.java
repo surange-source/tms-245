@@ -2,8 +2,8 @@ package server.life;
 
 import constants.GameConstants;
 import server.life.MapleLifeFactory.loseItem;
-import tools.Pair;
-import tools.Triple;
+import tools.types.Pair;
+import tools.types.Triple;
 
 import java.awt.*;
 import java.util.*;

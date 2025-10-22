@@ -4,7 +4,7 @@
  */
 package server.squad;
 
-import tools.Pair;
+import tools.types.Pair;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -11,7 +11,7 @@ import provider.MapleDataProvider;
 import provider.MapleDataProviderFactory;
 import server.MapleItemInformationProvider;
 import server.reward.RewardDropEntry;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

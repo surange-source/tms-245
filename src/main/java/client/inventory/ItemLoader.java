@@ -3,7 +3,7 @@ package client.inventory;
 import constants.ItemConstants;
 import database.DatabaseConnectionEx;
 import server.MapleItemInformationProvider;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.sql.*;
 import java.util.LinkedHashMap;

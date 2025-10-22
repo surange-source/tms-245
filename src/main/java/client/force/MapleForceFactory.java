@@ -15,7 +15,7 @@ import server.buffs.MapleStatEffectFactory;
 import server.life.MapleMonster;
 import server.maps.MapleMapItem;
 import server.maps.MapleMapObject;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.awt.*;
 import java.util.List;

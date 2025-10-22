@@ -7,9 +7,14 @@ import tools.HexTool;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.io.*;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
+
 
 /**
  * Writes a maplestory-packet little-endian stream of bytes.
@@ -38,16 +43,16 @@ public final class MaplePacketLittleEndianWriter {
     }
 
     public MaplePacketLittleEndianWriter(SendPacketOpcode opcode) {
-        this.baos = new ByteArrayOutputStream(32);
+        this(32);
         writeShort(opcode.getValue());
     }
 
     /**
      * Write the number of zero bytes
      */
-    public final void writeZeroBytes(final int i) {
+    public void writeZeroBytes(final int i) {
         for (int x = 0; x < i; x++) {
-            baos.write((byte) 0);
+            baos.write(0);
         }
     }
 
@@ -56,10 +61,8 @@ public final class MaplePacketLittleEndianWriter {
      *
      * @param b The bytes to write.
      */
-    public final void write(final byte[] b) {
-        for (byte aB : b) {
-            baos.write(aB);
-        }
+    public void write(final byte[] b) {
+        baos.write(b, 0, b.length);
     }
 
     /**
@@ -67,7 +70,7 @@ public final class MaplePacketLittleEndianWriter {
      *
      * @param b The byte to write.
      */
-    public final void write(final byte b) {
+    public void write(final byte b) {
         baos.write(b);
     }
 
@@ -76,7 +79,7 @@ public final class MaplePacketLittleEndianWriter {
      *
      * @param b The byte as an Integer to write.
      */
-    public final void write(final int b) {
+    public void write(final int b) {
         baos.write((byte) b);
     }
 
@@ -86,7 +89,7 @@ public final class MaplePacketLittleEndianWriter {
      *
      * @param b The byte as an Boolean to write.
      */
-    public final void write(final boolean b) {
+    public void write(final boolean b) {
         baos.write((byte) (b ? 1 : 0));
     }
 
@@ -94,42 +97,36 @@ public final class MaplePacketLittleEndianWriter {
      * Write a short integer to the stream.
      *
      * @param i The short integer to write.
+     * @return
      */
-    public final void writeShort(final short i) {
+    public int writeShort(final int i) {
         baos.write((byte) (i & 0xFF));
         baos.write((byte) ((i >>> 8) & 0xFF));
-    }
-
-    /**
-     * Write a int integer to the sequence.
-     *
-     * @param i The int integer to write.
-     */
-    public final void writeShort(final int i) {
-        baos.write((byte) (i & 0xFF));
-        baos.write((byte) ((i >>> 8) & 0xFF));
+        return i;
     }
 
     /**
      * Writes an integer to the stream.
      *
      * @param i The integer to write.
+     * @return
      */
-    public final void writeInt(final int i) {
+    public int writeInt(final int i) {
         baos.write((byte) (i & 0xFF));
         baos.write((byte) ((i >>> 8) & 0xFF));
         baos.write((byte) ((i >>> 16) & 0xFF));
         baos.write((byte) ((i >>> 24) & 0xFF));
+        return i;
     }
 
-    public final void writeInt(final long n) {
-        baos.write((byte)(n & 0xFFL));
-        baos.write((byte)(n >>> 8 & 0xFFL));
-        baos.write((byte)(n >>> 16 & 0xFFL));
-        baos.write((byte)(n >>> 24 & 0xFFL));
+    public void writeInt(final long n) {
+        baos.write((byte) (n & 0xFFL));
+        baos.write((byte) (n >>> 8 & 0xFFL));
+        baos.write((byte) (n >>> 16 & 0xFFL));
+        baos.write((byte) (n >>> 24 & 0xFFL));
     }
 
-    public final void writeReversedInt(final long l) {
+    public void writeReversedInt(final long l) {
         baos.write((byte) ((l >>> 32) & 0xFF));
         baos.write((byte) ((l >>> 40) & 0xFF));
         baos.write((byte) ((l >>> 48) & 0xFF));
@@ -141,7 +138,7 @@ public final class MaplePacketLittleEndianWriter {
      *
      * @param s The CHARSET string to write.
      */
-    public final void writeAsciiString(final String s) {
+    public void writeAsciiString(final String s) {
         write(s.getBytes(CHARSET));
     }
 
@@ -149,17 +146,17 @@ public final class MaplePacketLittleEndianWriter {
      * Writes a null-terminated CHARSET string to the sequence.
      *
      * @param s   The CHARSET string to write.
-     * @param max
+     * @param max The maximum length of the string
      */
-    public final void writeAsciiString(final String s, final int max) {
+    public void writeAsciiString(final String s, final int max) {
+        if (s == null) {
+            return;
+        }
         byte[] bytes = s.getBytes(CHARSET);
-//        write(bytes);
-        for (int i = 0, len = bytes.length; i < max; i++) {
-            if (i < len) {
-                write(bytes[i]);
-            } else {
-                write(0);
-            }
+        int len = Math.min(s.getBytes(CHARSET).length, max);
+        write(bytes);
+        for (int i = len; i < max; i++) {
+            write(0);
         }
     }
 
@@ -168,7 +165,7 @@ public final class MaplePacketLittleEndianWriter {
      *
      * @param s The CHARSET string to write.
      */
-    public final void writeMapleNameString(String s) {
+    public void writeMapleNameString(String s) {
         if (s.getBytes().length > 13) {
             s = s.substring(0, 13);
         }
@@ -183,24 +180,18 @@ public final class MaplePacketLittleEndianWriter {
      *
      * @param s The CHARSET string to use maple-convention to write.
      */
-    public final void writeMapleAsciiString(final String s) {
+    public void writeMapleAsciiString(final String s) {
         if (s == null) {
             writeShort(0);
             return;
         }
-        writeShort((short) s.getBytes(CHARSET).length);
+        writeShort(s.getBytes(CHARSET).length);
         writeAsciiString(s);
     }
 
-    public final void writeMapleAsciiString(String s, final int max) {
-        writeShort((short) max);
-        if (s.getBytes().length > max) {
-            s = s.substring(0, max);
-        }
-        writeAsciiString(s);
-        for (int x = s.getBytes(CHARSET).length; x < max; x++) {
-            write(0);
-        }
+    public void writeMapleAsciiString(String s, final int max) {
+        writeShort(max);
+        writeAsciiString(s, max);
     }
 
     public void writeMapleAsciiString(String[] arrstring) {
@@ -230,7 +221,7 @@ public final class MaplePacketLittleEndianWriter {
      *
      * @param s The Point position to write.
      */
-    public final void writePos(final Point s) {
+    public void writePos(final Point s) {
         writeShort(s.x);
         writeShort(s.y);
     }
@@ -250,7 +241,7 @@ public final class MaplePacketLittleEndianWriter {
      *
      * @param s The Rectangle to write.
      */
-    public final void writeRect(final Rectangle s) {
+    public void writeRect(final Rectangle s) {
         writeInt(s.x);
         writeInt(s.y);
         writeInt(s.x + s.width);
@@ -262,14 +253,14 @@ public final class MaplePacketLittleEndianWriter {
      *
      * @param l The long integer to write.
      */
-    public final void writeLong(final long l) {
-        writeInt(l);
+    public void writeLong(final long l) {
+        writeInt((int) l);
         writeReversedInt(l);
     }
 
-    public final void writeReversedLong(final long l) {
+    public void writeReversedLong(final long l) {
         writeReversedInt(l);
-        writeInt(l);
+        writeInt((int) l);
     }
 
     /**
@@ -277,7 +268,7 @@ public final class MaplePacketLittleEndianWriter {
      *
      * @param b The boolean to write.
      */
-    public final void writeBool(final boolean b) {
+    public void writeBool(final boolean b) {
         write(b ? 1 : 0);
     }
 
@@ -286,15 +277,15 @@ public final class MaplePacketLittleEndianWriter {
      *
      * @param b The boolean to write.
      */
-    public final void writeReversedBool(final boolean b) {
+    public void writeReversedBool(final boolean b) {
         write(b ? 0 : 1);
     }
 
-    public final void writeDouble(final double b) {
+    public void writeDouble(final double b) {
         writeLong(Double.doubleToLongBits(b));
     }
 
-    public final void writeHexString(final String s) {
+    public void writeHexString(final String s) {
         write(HexMap.computeIfAbsent(s, k -> HexTool.getByteArrayFromHexString(s)));
     }
 
@@ -302,7 +293,7 @@ public final class MaplePacketLittleEndianWriter {
         writeShort(op.getValue());
     }
 
-    public final void writeFile(final File file) {
+    public void writeFile(final File file) {
         byte[] bytes = new byte[0];
         if (file != null && file.exists()) {
             long length = file.length();
@@ -310,32 +301,25 @@ public final class MaplePacketLittleEndianWriter {
                 System.err.println("檔案太大");
             } else {
                 bytes = new byte[(int) length];
-                int offset = 0;
-                int numRead = 0;
-                try (InputStream is = new FileInputStream(file)) {
-                    while ((offset < bytes.length) && ((numRead = is.read(bytes, offset, bytes.length - offset)) >= 0)) {
-                        offset += numRead;
-                    }
+                try (FileInputStream is = new FileInputStream(file)) {
+                    int numRead = is.read(bytes);
+                    writeInt(numRead);
+                    write(bytes);
                 } catch (IOException e) {
                     System.err.println("讀取檔案失敗:" + e);
-                    bytes = new byte[0];
-                }
-                if (offset < bytes.length) {
-                    System.err.println("無法完整讀取檔案:" + file.getName());
-                    bytes = new byte[0];
                 }
             }
+        } else {
+            writeInt(0);
         }
-        writeInt(bytes.length);
-        write(bytes);
     }
 
-    public final void writeZigZagVarints(int b) {
+    public void writeZigZagVarints(int b) {
         b = (b << 1) ^ (b >> 31);
         writeVarints(b);
     }
 
-    public final void writeVarints(int b) {
+    public void writeVarints(int b) {
         while (true) {
             if ((b & (~0x7F)) == 0) {
                 write(b);
@@ -347,7 +331,7 @@ public final class MaplePacketLittleEndianWriter {
         }
     }
 
-    public final void writeReversedVarints(int b) {
+    public void writeReversedVarints(int b) {
         while (true) {
             if ((b & (~0x7F)) == 0) {
                 write(b << 1);
@@ -377,9 +361,5 @@ public final class MaplePacketLittleEndianWriter {
     @Override
     public String toString() {
         return HexTool.toString(baos.toByteArray());
-    }
-
-    public void writeByte(int i) {
-        write(i);
     }
 }

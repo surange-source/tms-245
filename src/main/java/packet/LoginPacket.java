@@ -15,6 +15,7 @@ import handling.opcode.SendPacketOpcode;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import tools.*;
+import tools.types.*;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.util.List;

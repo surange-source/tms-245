@@ -7,7 +7,7 @@ import provider.MapleDataProvider;
 import provider.MapleDataProviderFactory;
 import provider.MapleDataTool;
 import server.InitializeServer.WzSqlName;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.io.Serializable;
 import java.sql.Connection;

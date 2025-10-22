@@ -25,8 +25,8 @@ import packet.MaplePacketCreator;
 import server.buffs.MapleStatEffect;
 import server.life.*;
 import server.maps.MapleSummon;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import tools.data.MaplePacketReader;
 
 import java.awt.*;

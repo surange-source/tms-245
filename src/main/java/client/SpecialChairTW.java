@@ -1,6 +1,6 @@
 package client;
 
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.awt.Point;
 import java.awt.Rectangle;

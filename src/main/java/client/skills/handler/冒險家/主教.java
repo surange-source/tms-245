@@ -20,7 +20,7 @@ import server.life.MobSkill;
 import server.maps.ForceAtomObject;
 import server.maps.MapleMapObject;
 import server.maps.MapleSummon;
-import tools.Randomizer;
+import server.Randomizer;
 import tools.data.MaplePacketReader;
 
 import java.awt.*;

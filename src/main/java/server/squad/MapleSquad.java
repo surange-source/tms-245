@@ -7,7 +7,7 @@ import handling.world.WorldFindService;
 import server.Timer.EtcTimer;
 import server.maps.MapleMap;
 import packet.MaplePacketCreator;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.lang.ref.WeakReference;
 import java.util.*;

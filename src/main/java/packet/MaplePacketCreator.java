@@ -35,10 +35,12 @@ import server.maps.MapleNodes.MaplePlatform;
 import server.movement.LifeMovementFragment;
 import server.movement.MapleMulitInfo;
 import server.quest.MapleQuest;
+import server.Randomizer;
 import server.shops.HiredFisher;
 import server.shops.HiredMerchant;
 import server.shops.MaplePlayerShopItem;
 import tools.*;
+import tools.types.*;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.awt.*;
@@ -3101,7 +3103,7 @@ public class MaplePacketCreator {
                     break;
                 case IDENTITY:
                     mplew.writeInt(player.getAccountID());
-                    mplew.writeByte(0);
+                    mplew.write(0);
                     mplew.writeInt(0);
                     break;
                 case POP_BUTTON:
@@ -3110,7 +3112,7 @@ public class MaplePacketCreator {
                 case ROLLING_HOUSE:
                     mplew.writeInt(0);
                     mplew.writeInt(0);
-                    mplew.writeByte(0);
+                    mplew.write(0);
                     mplew.writeInt(0);
                     mplew.writeInt(0);
                     break;
@@ -3137,7 +3139,7 @@ public class MaplePacketCreator {
                 case ROLLING_HOUSE_2019:
                     mplew.writeInt(0);
                     mplew.writeInt(0);
-                    mplew.writeByte(0);
+                    mplew.write(0);
                     mplew.writeInt(0);
                     mplew.writeInt(0);
 
@@ -6693,10 +6695,10 @@ public class MaplePacketCreator {
         mplew.writeOpcode(SendPacketOpcode.LP_SpecialChairSitResult);
         mplew.writeInt(var0);
         mplew.writeBool(var1);
-        mplew.writeByte(0);
+        mplew.write(0);
         if (var3 == null) {
             mplew.writeInt(0);
-            mplew.writeByte(0);
+            mplew.write(0);
         } else {
             SpecialChairTWData(mplew, var2, var3);
         }

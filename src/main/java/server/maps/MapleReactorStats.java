@@ -1,6 +1,6 @@
 package server.maps;
 
-import tools.Pair;
+import tools.types.Pair;
 
 import java.awt.*;
 import java.util.HashMap;

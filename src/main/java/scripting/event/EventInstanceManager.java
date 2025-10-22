@@ -20,7 +20,7 @@ import server.maps.MapleMapFactory;
 import server.quest.MapleQuest;
 import server.squad.MapleSquad;
 import packet.MaplePacketCreator;
-import tools.Pair;
+import tools.types.Pair;
 import packet.MobPacket;
 import packet.UIPacket;
 

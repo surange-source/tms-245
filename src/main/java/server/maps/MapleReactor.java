@@ -5,7 +5,7 @@ import constants.GameConstants;
 import scripting.reactor.ReactorScriptManager;
 import server.Timer.MapTimer;
 import packet.MaplePacketCreator;
-import tools.Pair;
+import tools.types.Pair;
 
 import java.awt.*;
 

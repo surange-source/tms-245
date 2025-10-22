@@ -12,7 +12,7 @@ import handling.world.WorldGuildService;
 import handling.world.guild.MapleGuild;
 import handling.world.guild.MapleGuildCharacter;
 import server.buffs.MapleStatEffect;
-import tools.Pair;
+import tools.types.Pair;
 import packet.GuildPacket;
 import tools.data.MaplePacketReader;
 

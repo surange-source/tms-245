@@ -12,8 +12,8 @@ import constants.enums.ChairType;
 import server.MapleItemInformationProvider;
 import server.StructItemOption;
 import server.StructSetItem;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 
 import java.util.*;
 

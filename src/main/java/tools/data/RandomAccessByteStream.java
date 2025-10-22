@@ -24,6 +24,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 
 /**
@@ -43,8 +44,7 @@ public class RandomAccessByteStream implements ByteStream {
     /**
      * Class constructor. Wraps this object around a RandomAccessFile.
      *
-     * @param raf
-     *            The RandomAccessFile instance to wrap this around.
+     * @param raf The RandomAccessFile instance to wrap this around.
      * @see RandomAccessFile
      */
     public RandomAccessByteStream(final RandomAccessFile raf) {
@@ -113,11 +113,11 @@ public class RandomAccessByteStream implements ByteStream {
         return buffer.toByteArray();
     }
 
-    private static final Charset CHARSET = Charset.forName("UTF-8");
+    private static final Charset CHARSET = StandardCharsets.UTF_8;
 
-    public final void writeByte(final int b) {
+    public final void write(final int b) {
         try {
-            raf.writeByte(b);
+            raf.write(b);
             pos++;
         } catch (IOException e) {
             e.printStackTrace();
@@ -126,20 +126,20 @@ public class RandomAccessByteStream implements ByteStream {
 
     public final void write(final byte[] b) {
         for (int x = 0; x < b.length; x++) {
-            writeByte(b[x]);
+            write(b[x]);
         }
     }
 
     public final void writeShort(final int i) {
-        writeByte((byte) (i & 0xFF));
-        writeByte((byte) ((i >>> 8) & 0xFF));
+        write((byte) (i & 0xFF));
+        write((byte) ((i >>> 8) & 0xFF));
     }
 
     public final void writeInt(final int i) {
-        writeByte((byte) (i & 0xFF));
-        writeByte((byte) ((i >>> 8) & 0xFF));
-        writeByte((byte) ((i >>> 16) & 0xFF));
-        writeByte((byte) ((i >>> 24) & 0xFF));
+        write((byte) (i & 0xFF));
+        write((byte) ((i >>> 8) & 0xFF));
+        write((byte) ((i >>> 16) & 0xFF));
+        write((byte) ((i >>> 24) & 0xFF));
     }
 
     public final void writeAsciiString(String s) {
@@ -147,14 +147,14 @@ public class RandomAccessByteStream implements ByteStream {
     }
 
     public final void writeLong(final long l) {
-        writeByte((byte) (l & 0xFF));
-        writeByte((byte) ((l >>> 8) & 0xFF));
-        writeByte((byte) ((l >>> 16) & 0xFF));
-        writeByte((byte) ((l >>> 24) & 0xFF));
-        writeByte((byte) ((l >>> 32) & 0xFF));
-        writeByte((byte) ((l >>> 40) & 0xFF));
-        writeByte((byte) ((l >>> 48) & 0xFF));
-        writeByte((byte) ((l >>> 56) & 0xFF));
+        write((byte) (l & 0xFF));
+        write((byte) ((l >>> 8) & 0xFF));
+        write((byte) ((l >>> 16) & 0xFF));
+        write((byte) ((l >>> 24) & 0xFF));
+        write((byte) ((l >>> 32) & 0xFF));
+        write((byte) ((l >>> 40) & 0xFF));
+        write((byte) ((l >>> 48) & 0xFF));
+        write((byte) ((l >>> 56) & 0xFF));
     }
 
     public final void close() throws IOException {

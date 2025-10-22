@@ -1,5 +1,7 @@
 package tools;
 
+import server.Randomizer;
+
 public final class CRand32 {
     private long seed1;
     private long seed2;

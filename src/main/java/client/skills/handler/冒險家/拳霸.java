@@ -19,8 +19,8 @@ import server.buffs.MapleStatEffect;
 import server.life.MapleLifeFactory;
 import server.life.MapleMonster;
 import server.maps.ForceAtomObject;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.awt.*;

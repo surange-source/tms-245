@@ -8,8 +8,8 @@ import provider.MapleDataProviderFactory;
 import provider.MapleDataTool;
 import server.life.MapleMonster;
 import server.maps.MapleMap;
-import tools.Pair;
-import tools.Randomizer;
+import tools.types.Pair;
+import server.Randomizer;
 import tools.data.MaplePacketLittleEndianWriter;
 
 import java.awt.*;

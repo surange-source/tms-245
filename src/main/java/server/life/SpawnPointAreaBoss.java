@@ -5,7 +5,7 @@ import constants.enums.UserChatMessageType;
 import handling.world.WorldBroadcastService;
 import server.maps.MapleMap;
 import packet.MaplePacketCreator;
-import tools.Randomizer;
+import server.Randomizer;
 
 import java.awt.*;
 import java.util.concurrent.atomic.AtomicBoolean;
