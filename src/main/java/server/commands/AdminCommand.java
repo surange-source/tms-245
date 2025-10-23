@@ -600,20 +600,6 @@ public class AdminCommand {
         }
     }
 
-    public static class 封包測試 implements CommandExecute {
-
-        @Override
-        public String getShortCommand() {
-            return null;
-        }
-
-        @Override
-        public int execute(MapleClient c, String[] splitted) {
-            c.StartWindow();
-            return 1;
-        }
-    }
-
     public static class 重載複製 implements CommandExecute {
 
         @Override

@@ -90,7 +90,6 @@ public final class MapleClient implements Serializable {
     private transient String secondPassword, salt2, tempIP = ""; // To be used only on login
     private long lastNpcClick = 0, sessionId;
     private byte loginattempt = 0;
-    private DebugUI debugWindow; //調試封包窗口
     private Triple<String, String, Boolean> tempinfo = null;
     private Map<Short, Short> encryptedOpcodes = new LinkedHashMap<>();
     private int sessionIdx;
@@ -377,16 +376,6 @@ public final class MapleClient implements Serializable {
 
     public void setSessionId(long sessionId) {
         this.sessionId = sessionId;
-    }
-
-    public void StartWindow() {
-        if (debugWindow != null) {
-            debugWindow.setVisible(false);
-            debugWindow = null;
-        }
-        debugWindow = new DebugUI();
-        debugWindow.setVisible(true);
-        debugWindow.setC(this);
     }
 
     public Lock getLock() {
@@ -1079,10 +1068,6 @@ public final class MapleClient implements Serializable {
                 return;
             }
             disconnecting = true;
-        }
-        if (debugWindow != null) {
-            debugWindow.dispose();
-            debugWindow = null;
         }
         if (aliveCheckSchedule != null) {
             aliveCheckSchedule.cancel(true);

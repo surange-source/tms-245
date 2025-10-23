@@ -6,10 +6,8 @@ import configs.ServerConfig;
 import handling.world.CharacterTransfer;
 import handling.world.CheaterData;
 import handling.world.WorldFindService;
-import launch.groups.datamanage.PlayerPane;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import plugin.GuiManager;
 import server.ShutdownServer;
 import server.Timer.PingTimer;
 
@@ -54,10 +52,6 @@ public class PlayerStorage {
         try {
             nameToChar.put(chr.getName().toLowerCase(), chr);
             idToChar.put(chr.getId(), chr);
-            if (ServerConfig.updatePlayerInGUI && ServerConfig.GUI_ENABLED) {
-                GuiManager.onlineStatusChanged(channel, getConnectedClients());
-                PlayerPane.getInstance(null).registerIDs(chr.getId(), chr.getPlayerObservable());
-            }
         } finally {
             writeLock.unlock();
         }
@@ -141,11 +135,7 @@ public class PlayerStorage {
             MapleCharacter chr = idToChar.remove(idz);
             if (chr != null) {
                 chr.saveOnlineTime();
-                if (ServerConfig.updatePlayerInGUI && ServerConfig.GUI_ENABLED) {
-                    PlayerPane.getInstance(null).removeIDs(chr.getId(), chr.getPlayerObservable());
-                }
             }
-            GuiManager.onlineStatusChanged(channel, getConnectedClients());
         } finally {
             writeLock.unlock();
         }

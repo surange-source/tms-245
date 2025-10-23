@@ -116,11 +116,6 @@ public final class ServerConfig {
      */
     @Property(key = "server.verifydamage", defaultValue = "false")
     public static boolean SERVER_VERIFY_DAMAGE;
-    /**
-     * 啟用GUI更新角色
-     */
-    @Property(key = "server.updatePlayerInGUI", defaultValue = "true")
-    public static boolean updatePlayerInGUI;
 
     /**
      * 預設的裝備可剪刀次數
@@ -566,9 +561,6 @@ public final class ServerConfig {
 
     @Property(key = "defaultMeso", defaultValue = "true")
     public static boolean ADD_DEFAULT_MESO;
-
-    @Property(key = "gui.enabled", defaultValue = "true")
-    public static boolean GUI_ENABLED;
 
     @Property(key = "gm.forall", defaultValue = "false")
     public static boolean FORCE_ALLOW_ALL_CMD;
