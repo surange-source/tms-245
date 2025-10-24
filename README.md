@@ -4,21 +4,21 @@
 1. 下载：客户端+服务端：https://t.me/tms245
 2. 解压客户端和服务端並导出wz等xml
 3. 安装JDK，版本是17
-3. 安装MySQL 5.7.44，參數如下
-database: playms
-username: root
+4. 安装MySQL 5.7.44，參數如下  
+database: playms  
+username: root  
 password: 123456
 
-4. 依序导入SQL文件
+5. 依序导入SQL文件  
 ![](asset/step3.png)
 
-5. 启动服务端
+6. 启动服务端  
 ![](asset/step4.png)
 
-6. 启动客户端
+7. 启动客户端  
 >需要改成繁体环境，或者向我一样模拟繁体环境登陆。
 
-7. Done
+8. Done  
 ![](asset/login.png)
 
 几个注意事项：
